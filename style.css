@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+}
+
+.contenedor-header {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-header > div {
+    background-color: violet;
+    border: 1px solid black;
+    margin: 20px;
+    flex-basis: 120px;
+}
+
+.contenedor-imagen-principal {
+    height: 230px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-seccion-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-principal {
+    height: 930px;
+    width: 1100px;
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+}
+
+.seccion-aside {
+    background-color: violet;
+    border: 1px solid black;
+    flex-basis: 200px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-productos {
+    background-color: violet;
+    border: 1px solid black;
+    flex-basis: 800px;
+    height: 900px;
+}
+
+.contenedor-botones-aside-1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: greenyellow;
+    margin: 5px;
+    margin: 5px;
+}
+
+.filtro, .limpiar {
+    border: 1px solid black;
+}
+
+.contenedor-botones-aside-2 {
+    background-color: greenyellow;
+    margin: 5px;
+}
+
+.contenedor-busqueda {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.contenedor-botones-aside-3 {
+    background-color: greenyellow;
+    margin: 5px;
+}
+
+.contenedor-botones-aside-4 {
+    background-color: greenyellow;
+    margin: 5px;
+}
+
+.contenedor-barra-principal-productos {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-botones-barra-principal-productos {
+    display: flex;
+}
+
+.contenedor-seccion-productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-seccion-productos > div {
+    background-color: chartreuse;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+}
+
+footer {
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
