@@ -30,7 +30,7 @@ body {
 }
 
 .seccion-principal {
-    height: 930px;
+    height: 100%;
     width: 1100px;
     background-color: goldenrod;
     display: flex;
@@ -50,7 +50,7 @@ body {
     background-color: violet;
     border: 1px solid black;
     flex-basis: 800px;
-    height: 900px;
+    height: 1300px;
 }
 
 .contenedor-botones-aside-1 {
@@ -105,7 +105,7 @@ body {
 .contenedor-seccion-productos > div {
     background-color: chartreuse;
     border: 1px solid black;
-    height: 200px;
+    height: 300px;
     width: 200px;
     margin: 5px;
 }
