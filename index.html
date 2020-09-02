@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <title>SOFÍA'S</title>
 </head>
 <body>
@@ -14,7 +16,7 @@
             </div>
 
             <div>
-                <p>Cart (0 items)</p>
+                <button>Cart (0 items)</button>
             </div>
         </section>
     </header>
@@ -29,34 +31,79 @@
         <div class="seccion-principal">
             <aside class="seccion-aside">
                 <div class="contenedor-botones-aside-1">
-                    <p class="filtros">FILTERS</p>
-                    <button class="limpiar">CLEAR</button>
+                    <h3 class="filtros">FILTERS</h3>
+                    <button>CLEAR</button>
                 </div>
                     
                 <div class="contenedor-botones-aside-2">
-                    <p class="buscar">SEARCH</p>
+                    <h3 class="buscar">SEARCH</h3>
                     <div class="contenedor-busqueda">
-                        <p class="buscar-productos">Search products</p>
+                        <input type="text" placeholder="Search products" class="buscar-productos">
                         <button class="boton-buscar">(Lupa)</button>
                     </div>
                 </div>
                 
-                <div class="contenedor-botones-aside-3">
-                    <p>CATEGORY</p>
-                    <p>Console</p>
-                    <p>Notebook</p>
-                    <p>Camera</p>
-                    <p>Cellphone</p>
-                    <p>Accesories</p>
+                <div class="contenedor-botones-aside-3 formulario">
+                    <h3>CATEGORY</h3>
+                        <label for="categorias">
+                            <input type="checkbox" name="cat" id="categorias" value="console">CONSOLES
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="cat" id="categorias" value="notebook">NOTEBOOKS
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="cat" id="categorias" value="cameras">CAMERAS
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="cat" id="categorias" value="cellphone">CELLPHONES
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="cat" id="categorias" value="accesories">ACCESORIES
+                        </label>
                 </div>
                 
-                <div class="contenedor-botones-aside-4">
-                    <p>RATING</p>
-                    <p>[5]</p>
-                    <p>[4]</p>
-                    <p>[3]</p>
-                    <p>[2]</p>
-                    <p>[1]</p>
+                <div class="contenedor-botones-aside-4 formulario">
+                    <h3>RATING</h3>
+                        <label for="rating">
+                            <input type="checkbox" name="rat" id="rating" value="5">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i> [5]
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="rat" id="rating" value="4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i> [4]
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="rat" id="rating" value="3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i> [3]
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="rat" id="rating" value="2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i> [2]
+                        </label>
+                        <label for="categorias">
+                            <input type="checkbox" name="rat" id="rating" value="1">
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i> [1]
+                        </label>
                 </div>
             
             </aside>
