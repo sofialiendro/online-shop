@@ -47,23 +47,23 @@
                     <div class="contenedor-botones-aside-3 formulario">
                         <h3>CATEGORY</h3>
                             <label for="categorias">
-                                <input type="checkbox" name="cat" id="categorias" value="console">CATS
+                                <input type="checkbox" name="categoria" class="categorias" value="console">CATS
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="cat" id="categorias" value="notebook">DOGS
+                                <input type="checkbox" name="categoria" class="categorias" value="notebook">DOGS
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="cat" id="categorias" value="cameras">HAMSTERS
+                                <input type="checkbox" name="categoria" class="categorias" value="cameras">HAMSTERS
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="cat" id="categorias" value="cellphone">BUNNIES
+                                <input type="checkbox" name="categoria" class="categorias" value="cellphone">BUNNIES
                             </label>
                     </div>
                     
                     <div class="contenedor-botones-aside-4 formulario">
                         <h3>RATING</h3>
                             <label for="rating">
-                                <input type="checkbox" name="rat" id="rating" value="5">
+                                <input type="checkbox" name="puntaje" value="5" class="rating" value="5">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -71,7 +71,7 @@
                                 <i class="fas fa-star"></i> [5]
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="rat" id="rating" value="4">
+                                <input type="checkbox" name="puntaje" value="4" class="rating" value="4">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -79,7 +79,7 @@
                                 <i class="far fa-star"></i> [4]
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="rat" id="rating" value="3">
+                                <input type="checkbox" name="puntaje" value="3" class="rating" value="3">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -87,7 +87,7 @@
                                 <i class="far fa-star"></i> [3]
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="rat" id="rating" value="2">
+                                <input type="checkbox" name="puntaje" value="2" class="rating" value="2">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -95,7 +95,7 @@
                                 <i class="far fa-star"></i> [2]
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="rat" id="rating" value="1">
+                                <input type="checkbox" name="puntaje" value="1" class="rating" value="1">
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -122,11 +122,11 @@
 
                 <section class="contenedor-seccion-productos">
                     <div id="imagen-1">
-                        <article class="product"
+                        <article class="producto"
                         data-nombre="iphone"
                         data-categoria="celulares"
                         data-precio="22499"
-                        data-rating="5"
+                        data-puntaje="3"
                         >
                           <div class="product-img-container">
                             <img src="http://www.placekitten.com/600" class="product-img" />
@@ -134,7 +134,31 @@
                           <div class="product-body">
                             <h3 class="product-name">Celular Iphone</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+                          </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto"
+                        data-nombre="rosa"
+                        data-categoria="celulares"
+                        data-precio="22499"
+                        data-puntaje="5"
+                        >
+                          <div class="product-img-container">
+                            <img src="http://www.placekitten.com/600" class="product-img" />
+                          </div>
+                          <div class="product-body">
+                            <h3 class="product-name">Celular rosa</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="rating">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
@@ -146,19 +170,67 @@
                     </div>
 
                     <div>
-                        <article class="product"
-                        data-nombre="iphone"
+                        <article class="producto"
+                        data-nombre="rojo"
                         data-categoria="celulares"
                         data-precio="22499"
-                        data-rating="5"
+                        data-puntaje="2"
                         >
                           <div class="product-img-container">
                             <img src="http://www.placekitten.com/600" class="product-img" />
                           </div>
                           <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
+                            <h3 class="product-name">Celular rojo</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+                          </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto"
+                        data-nombre="azul"
+                        data-categoria="celulares"
+                        data-precio="22499"
+                        data-puntaje="3"
+                        >
+                          <div class="product-img-container">
+                            <img src="http://www.placekitten.com/600" class="product-img" />
+                          </div>
+                          <div class="product-body">
+                            <h3 class="product-name">Celular azul</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                            </div>
+                          </div>
+                        </article>
+                    </div>
+
+                    <div>
+                        <article class="producto"
+                        data-nombre="amarillo"
+                        data-categoria="celulares"
+                        data-precio="22499"
+                        data-puntaje="5"
+                        >
+                          <div class="product-img-container">
+                            <img src="http://www.placekitten.com/600" class="product-img" />
+                          </div>
+                          <div class="product-body">
+                            <h3 class="product-name">Celular amarillo</h3>
+                            <p class="product-price">$ 22499</p>
+                            <div class="rating">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
@@ -170,152 +242,152 @@
                     </div>
 
                     <div>
-                        <article class="product"
-                        data-nombre="iphone"
+                        <article class="producto"
+                        data-nombre="celeste"
                         data-categoria="celulares"
                         data-precio="22499"
-                        data-rating="5"
+                        data-puntaje="1"
                         >
                           <div class="product-img-container">
                             <img src="http://www.placekitten.com/600" class="product-img" />
                           </div>
                           <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
+                            <h3 class="product-name">Celular celeste</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
                             </div>
                           </div>
                         </article>
                     </div>
 
                     <div>
-                        <article class="product"
-                        data-nombre="iphone"
+                        <article class="producto"
+                        data-nombre="negro"
                         data-categoria="celulares"
                         data-precio="22499"
-                        data-rating="5"
+                        data-puntaje="3"
                         >
                           <div class="product-img-container">
                             <img src="http://www.placekitten.com/600" class="product-img" />
                           </div>
                           <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
+                            <h3 class="product-name">Celular negro</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
                             </div>
                           </div>
                         </article>
                     </div>
 
                     <div>
-                        <article class="product"
-                        data-nombre="iphone"
+                        <article class="producto"
+                        data-nombre="blanco"
                         data-categoria="celulares"
                         data-precio="22499"
-                        data-rating="5"
+                        data-puntaje="2"
                         >
                           <div class="product-img-container">
                             <img src="http://www.placekitten.com/600" class="product-img" />
                           </div>
                           <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
+                            <h3 class="product-name">Celular blanco</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
                             </div>
                           </div>
                         </article>
                     </div>
 
                     <div>
-                        <article class="product"
-                        data-nombre="iphone"
+                        <article class="producto"
+                        data-nombre="android"
                         data-categoria="celulares"
                         data-precio="22499"
-                        data-rating="5"
+                        data-puntaje="4"
                         >
                           <div class="product-img-container">
                             <img src="http://www.placekitten.com/600" class="product-img" />
                           </div>
                           <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
+                            <h3 class="product-name">Celular android</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
                             </div>
                           </div>
                         </article>
                     </div>
 
                     <div>
-                        <article class="product"
-                        data-nombre="iphone"
+                        <article class="producto"
+                        data-nombre="samsung"
                         data-categoria="celulares"
                         data-precio="22499"
-                        data-rating="5"
+                        data-puntaje="3"
                         >
                           <div class="product-img-container">
                             <img src="http://www.placekitten.com/600" class="product-img" />
                           </div>
                           <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
+                            <h3 class="product-name">Celular samsung</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
                             </div>
                           </div>
                         </article>
                     </div>
 
                     <div>
-                        <article class="product"
-                        data-nombre="iphone"
+                        <article class="producto"
+                        data-nombre="xiaomi"
                         data-categoria="celulares"
                         data-precio="22499"
-                        data-rating="5"
+                        data-puntaje="4"
                         >
                           <div class="product-img-container">
                             <img src="http://www.placekitten.com/600" class="product-img" />
                           </div>
                           <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
+                            <h3 class="product-name">Celular xiaomi</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
                             </div>
                           </div>
                         </article>
                     </div>
 
                     <div>
-                        <article class="product"
-                        data-nombre="iphone"
+                        <article class="producto"
+                        data-nombre="moto"
                         data-categoria="celulares"
                         data-precio="22499"
                         data-rating="5"
@@ -324,81 +396,9 @@
                             <img src="http://www.placekitten.com/600" class="product-img" />
                           </div>
                           <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
+                            <h3 class="product-name">Celular moto</h3>
                             <p class="product-price">$ 22499</p>
-                            <div class="review">
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                          </div>
-                        </article>
-                    </div>
-
-                    <div>
-                        <article class="product"
-                        data-nombre="iphone"
-                        data-categoria="celulares"
-                        data-precio="22499"
-                        data-rating="5"
-                        >
-                          <div class="product-img-container">
-                            <img src="http://www.placekitten.com/600" class="product-img" />
-                          </div>
-                          <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
-                            <p class="product-price">$ 22499</p>
-                            <div class="review">
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                          </div>
-                        </article>
-                    </div>
-
-                    <div>
-                        <article class="product"
-                        data-nombre="iphone"
-                        data-categoria="celulares"
-                        data-precio="22499"
-                        data-rating="5"
-                        >
-                          <div class="product-img-container">
-                            <img src="http://www.placekitten.com/600" class="product-img" />
-                          </div>
-                          <div class="product-body">
-                            <h3 class="product-name">Celular Iphone</h3>
-                            <p class="product-price">$ 22499</p>
-                            <div class="review">
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </div>
-                          </div>
-                        </article>
-                    </div>
-
-                    <div>
-                        <article class="product"
-                        data-nombre="iphone"
-                        data-categoria="celulares"
-                        data-precio="22499"
-                        data-rating="5"
-                        >
-                          <div class="product-img-container">
-                            <img src="http://www.placekitten.com/600" class="product-img" />
-                          </div>
-                          <div class="product-body">
-                            <h3 class="product-name">Celular Android</h3>
-                            <p class="product-price">$ 22499</p>
-                            <div class="review">
+                            <div class="rating">
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star"></i>
