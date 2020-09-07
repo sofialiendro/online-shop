@@ -31,10 +31,10 @@
     <section class="contenedor-seccion-principal">
         <div class="seccion-principal">
             <aside class="seccion-aside">
-                <form>
+                <form class="formulario-principal" name="form-princ">
                     <div class="contenedor-botones-aside-1">
                         <h3 class="filtros">FILTERS</h3>
-                        <button>CLEAR</button>
+                        <button class="filters-clear-btn"><i class="fas fa-trash-alt"></i>CLEAR</button>
                     </div>
                         
                     <div class="contenedor-botones-aside-2">
@@ -63,40 +63,40 @@
                     
                     <div class="contenedor-botones-aside-4 formulario">
                         <h3>RATING</h3>
-                            <label for="rating">
-                                <input type="checkbox" name="puntaje" value="5" class="rating" value="5">
+                            <label>
+                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="5">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i> (5)
                             </label>
-                            <label for="categorias">
-                                <input type="checkbox" name="puntaje" value="4" class="rating" value="4">
+                            <label>
+                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="4">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i> (4)
                             </label>
-                            <label for="categorias">
-                                <input type="checkbox" name="puntaje" value="3" class="rating" value="3">
+                            <label>
+                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="3">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i> (3)
                             </label>
-                            <label for="categorias">
-                                <input type="checkbox" name="puntaje" value="2" class="rating" value="2">
+                            <label>
+                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="2">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i> (2)
                             </label>
-                            <label for="categorias">
-                                <input type="checkbox" name="puntaje" value="1" class="rating" value="1">
+                            <label>
+                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="1">
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -145,7 +145,7 @@
                           <i class="far fa-star"></i>
                         <div class="product-actions">
                           <button type="button" class="button button-default add-to-cart-btn">
-                            GET IT
+                            ADD TO CART
                           </button>
                         </div>
                         </div>
@@ -175,7 +175,7 @@
                         </div>
                         <div class="product-actions">
                           <button type="button" class="button button-default add-to-cart-btn">
-                            GET IT
+                            ADD TO CART
                           </button>
                         </div>
                       </div>
@@ -204,7 +204,7 @@
                         </div>
                         <div class="product-actions">
                           <button type="button" class="button button-default add-to-cart-btn">
-                            GET IT
+                            ADD TO CART
                           </button>
                         </div>
                       </div>
@@ -233,7 +233,7 @@
                         </div>
                         <div class="product-actions">
                           <button type="button" class="button button-default add-to-cart-btn">
-                            GET IT
+                            ADD TO CART
                           </button>
                         </div>
                       </div>
@@ -262,7 +262,7 @@
                         </div>
                       <div class="product-actions">
                         <button type="button" class="button button-default add-to-cart-btn">
-                          GET IT
+                          ADD TO CART
                         </button>
                       </div>
                       </div>
@@ -291,7 +291,7 @@
                         </div>
                       <div class="product-actions">
                         <button type="button" class="button button-default add-to-cart-btn">
-                          GET IT
+                          ADD TO CART
                         </button>
                       </div>
                       </div>
@@ -320,7 +320,7 @@
                         </div>
                       <div class="product-actions">
                         <button type="button" class="button button-default add-to-cart-btn">
-                          GET IT
+                          ADD TO CART
                         </button>
                       </div>
                       </div>
@@ -349,7 +349,7 @@
                         </div>
                       <div class="product-actions">
                         <button type="button" class="button button-default add-to-cart-btn">
-                          GET IT
+                          ADD TO CART
                         </button>
                       </div>
                       </div>
@@ -378,7 +378,7 @@
                         </div>
                       <div class="product-actions">
                         <button type="button" class="button button-default add-to-cart-btn">
-                          GET IT
+                          ADD TO CART
                         </button>
                       </div>
                       </div>
@@ -407,7 +407,7 @@
                         </div>
                         <div class="product-actions">
                           <button type="button" class="button button-default add-to-cart-btn">
-                            GET IT
+                            ADD TO CART
                           </button>
                         </div>
                       </div>
@@ -436,7 +436,7 @@
                         </div>
                         <div class="product-actions">
                           <button type="button" class="button button-default add-to-cart-btn">
-                            GET IT
+                            ADD TO CART
                           </button>
                         </div>
                       </div>
@@ -448,7 +448,7 @@
                     data-nombre="feeder"
                     data-categoria="hamsters"
                     data-precio="35.99"
-                    data-rating="5"
+                    data-puntaje="5"
                     >
                       <div class="product-img-container">
                         <img src="img/Products/Automatic-Rabbit-Hamster-Feeder-Water-Bottles-Dispenser-Food-Dish-Bowl-for-Guinea-Pigs-Hamster-Mice-Small.jpg" class="product-img" />
@@ -465,7 +465,7 @@
                         </div>
                         <div class="product-actions">
                           <button type="button" class="button button-default add-to-cart-btn">
-                            GET IT
+                            ADD TO CART
                           </button>
                         </div>
                       </div>

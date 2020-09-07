@@ -1,7 +1,13 @@
 const busquedaProductos = document.querySelector("#buscar-productos")
 const tarjetas = document.getElementsByTagName("article")
-const filtroPuntaje = document.getElementsByClassName("rating")
+const filtroPuntaje = document.getElementsByClassName("rating-checkbox")
+const botonLimpiar = document.querySelector(".filters-clear-btn")
+const productos = document.getElementsByClassName("productos")
 
+
+
+
+// Búsqueda
 
 busquedaProductos.oninput = () => {
     
@@ -21,23 +27,97 @@ busquedaProductos.oninput = () => {
 }
 
 
-for (let filtrosCheckbox of filtroPuntaje) {
-    filtrosCheckbox.onclick = () => {
-        
-        for (let tarjeta of tarjetas) {
-            if (filtrosCheckbox.checked) {
-                const puntajeFiltro = tarjeta.dataset.puntaje
 
-                if (filtrosCheckbox.value === puntajeFiltro) {
-                    tarjeta.classList.remove("no-mostrar")
-                }
-                else {
-                    tarjeta.classList.add("no-mostrar")
-                }
-            }
-            else {
-                tarjeta.classList.remove("no-mostrar")
-            }
+// Filtro puntaje
+
+for (let checkbox of filtroPuntaje) {
+    checkbox.onclick = () => {
+        filtrarTarjetas()
+    }       
+}        
+
+const checkboxSeleccionado = () => {
+    for (let checkbox of filtroPuntaje) {
+        if (checkbox.checked) {
+            return true
         }
+    }
+} 
+
+const coincidenCheckboxYTarjeta = tarjeta => {
+    const puntaje = tarjeta.dataset.puntaje
+    for (let checkbox of filtroPuntaje) {
+        if (checkbox.value === puntaje && checkbox.checked) {
+            return true
+        }
+    }
+}
+
+const filtrarTarjetas = () => {
+    for (let tarjeta of tarjetas) {
+      tarjeta.classList.add("no-mostrar")
+      if (checkboxSeleccionado()) {
+        if (coincidenCheckboxYTarjeta(tarjeta)) {
+          tarjeta.classList.remove("no-mostrar")
+        }
+      }
+      else {
+        tarjeta.classList.remove("no-mostrar")
+      }
+    }
+}
+
+
+
+// Botón limpiar
+
+botonLimpiar.onclick = () => {
+
+    busquedaProductos.value = ""
+    for (let checkbox of checkboxes) {
+      checkbox.checked = false 
+    }
+    tarjeta.classList.remove("no-mostrar")
+}
+
+
+
+
+// Filtro categorías
+
+for (let checkbox of filtroPuntaje) {
+    checkbox.onclick = () => {
+        filtrarTarjetas()
+    }       
+}        
+
+const checkboxSeleccionado = () => {
+    for (let checkbox of filtroPuntaje) {
+        if (checkbox.checked) {
+            return true
+        }
+    }
+} 
+
+const coincidenCheckboxYTarjeta = tarjeta => {
+    const puntaje = tarjeta.dataset.puntaje
+    for (let checkbox of filtroPuntaje) {
+        if (checkbox.value === puntaje && checkbox.checked) {
+            return true
+        }
+    }
+}
+
+const filtrarTarjetas = () => {
+    for (let tarjeta of tarjetas) {
+      tarjeta.classList.add("no-mostrar")
+      if (checkboxSeleccionado()) {
+        if (coincidenCheckboxYTarjeta(tarjeta)) {
+          tarjeta.classList.remove("no-mostrar")
+        }
+      }
+      else {
+        tarjeta.classList.remove("no-mostrar")
+      }
     }
 }
