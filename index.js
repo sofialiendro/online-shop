@@ -3,7 +3,7 @@ const tarjetas = document.getElementsByTagName("article")
 const filtroPuntaje = document.getElementsByClassName("rating-checkbox")
 const botonLimpiar = document.querySelector(".filters-clear-btn")
 const productos = document.getElementsByClassName("productos")
-
+const filtroCategoria = document.getElementsByClassName("categorias")
 
 
 
@@ -42,12 +42,25 @@ const checkboxSeleccionado = () => {
             return true
         }
     }
+
+    for (let checkbox of filtroCategoria) {
+        if (checkbox.checked) {
+            return true
+        }
+    }
 } 
 
 const coincidenCheckboxYTarjeta = tarjeta => {
     const puntaje = tarjeta.dataset.puntaje
     for (let checkbox of filtroPuntaje) {
         if (checkbox.value === puntaje && checkbox.checked) {
+            return true
+        }
+    }
+
+    const categories = tarjeta.dataset.categoria
+    for (let checkbox of filtroCategoria) {
+        if (checkbox.value === categoria && checkbox.checked) {
             return true
         }
     }
@@ -85,39 +98,11 @@ botonLimpiar.onclick = () => {
 
 // Filtro categorías
 
-for (let checkbox of filtroPuntaje) {
+for (let checkbox of filtroCategoria) {
     checkbox.onclick = () => {
         filtrarTarjetas()
     }       
 }        
 
-const checkboxSeleccionado = () => {
-    for (let checkbox of filtroPuntaje) {
-        if (checkbox.checked) {
-            return true
-        }
-    }
-} 
 
-const coincidenCheckboxYTarjeta = tarjeta => {
-    const puntaje = tarjeta.dataset.puntaje
-    for (let checkbox of filtroPuntaje) {
-        if (checkbox.value === puntaje && checkbox.checked) {
-            return true
-        }
-    }
-}
 
-const filtrarTarjetas = () => {
-    for (let tarjeta of tarjetas) {
-      tarjeta.classList.add("no-mostrar")
-      if (checkboxSeleccionado()) {
-        if (coincidenCheckboxYTarjeta(tarjeta)) {
-          tarjeta.classList.remove("no-mostrar")
-        }
-      }
-      else {
-        tarjeta.classList.remove("no-mostrar")
-      }
-    }
-}
