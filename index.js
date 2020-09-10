@@ -60,7 +60,7 @@ const coincidenCheckboxYTarjeta = tarjeta => {
 
     const categories = tarjeta.dataset.categoria
     for (let checkbox of filtroCategoria) {
-        if (checkbox.value === categoria && checkbox.checked) {
+        if (checkbox.value === categories && checkbox.checked) {
             return true
         }
     }

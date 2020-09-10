@@ -5,6 +5,7 @@ body {
     margin: 0;
     background-color: #f5f5f5;
     font-family: "Quicksand";
+    height: 100%;
 }
 
 .contenedor-header {
@@ -36,14 +37,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(img/Untitled\ design\ \(1\).png);
+    background-image: url(img/ACCESORIES\ \(1\).png);
     flex: 1;
-}
-
-.texto-imagen-principal {
-    color: whitesmoke;
-    font-size: 35px;
-    font-family: 'Montserrat', sans-serif;
+    opacity: .7;
 }
 
 .contenedor-seccion-principal {
@@ -55,7 +51,8 @@ body {
 .seccion-principal {
     display: flex;
     flex-grow: 1;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1300px;
     justify-content: center;
 }
 
@@ -87,7 +84,7 @@ body {
 }
 
 .filters-clear-btn {
-    padding: 0;
+    font-family: "Quicksand";
 }
 
 
@@ -152,8 +149,8 @@ button, input, label {
     padding: 0;
     margin-left: 15px;
 }
+
 button {
-    transition: 0.2s;
     border: 0;
     background: transparent;
     cursor: pointer;
@@ -243,6 +240,7 @@ footer {
     align-items: center;
     background-color:#fff;
     font-family: 'Quicksand';
+    width: 100%;
 }
 
 ul {
@@ -286,6 +284,24 @@ ul {
     margin: 0;
 }
 
+
+
+/* Clase para JS */
+
 .no-mostrar {
     display: none;
+}
+
+
+
+/* Responsive */
+
+
+@media (max-width: 651px) {
+    
+}
+
+
+@media (max-width: 900px) and (min-width: 650px) {
+
 }
