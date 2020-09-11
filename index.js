@@ -5,6 +5,33 @@ const botonLimpiar = document.querySelector(".filters-clear-btn")
 const productos = document.getElementsByClassName("productos")
 const filtroCategoria = document.getElementsByClassName("categorias")
 
+const carrito = document.querySelector(".carrito")
+const subtotal = document.querySelector("#subtotal")
+const total = document.querySelector("#total")
+const recargoParrafo = document.querySelector("#recargo")
+const checkboxTarjeta = document.querySelector("#tarjeta")
+const botonMostrarCarrito = document.querySelector("#abrir-carrito")
+const botonOcultarCarrito = document.querySelector("#cerrar-carrito")
+
+const subtotalProductos = 5999
+
+carrito.classList.add("no-mostrar")
+
+botonMostrarCarrito.onclick = () => {
+  subtotal.textContent = subtotalProductos
+ carrito.classList.remove("no-mostrar")
+}
+
+botonOcultarCarrito.onclick = () => {
+  carrito.classList.add("no-mostrar")
+}
+
+checkboxTarjeta.onclick = () => {
+  const recargo = subtotalProductos * 0.1
+  recargoParrafo.textContent = recargo
+  total.textContent = subtotalProductos + recargo
+}
+
 
 
 // Búsqueda
