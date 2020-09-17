@@ -37,6 +37,12 @@ body {
     background-image: url(img/ACCESORIES\ \(1\).png);
     flex: 1;
     opacity: .7;
+    position: relative;
+}
+
+.texto-imagen-principal {
+    position: absolute;
+    bottom: 40%;
 }
 
 .contenedor-seccion-principal {
