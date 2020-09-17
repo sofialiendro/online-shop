@@ -25,7 +25,7 @@ const subtotalProductos = 5999
 carrito.classList.add("no-mostrar")
 
 botonMostrarCarrito.onclick = () => {
-  subtotal.textContent = subtotalProductos
+ subtotal.textContent = subtotalProductos
  carrito.classList.remove("no-mostrar")
 }
 
@@ -39,39 +39,43 @@ checkboxTarjeta.onclick = () => {
   total.textContent = subtotalProductos + recargo
 }
 
-const obtenerDescuento = (subtotal) => {
-    let descuento = subtotal - (subtotal * 0.1)
-    return descuento
-}
 
-const obtenerRecargo = (subtotal) => {
-    return subtotal + (subtotal * 0.1)
-}
 
-const obtenerGastosDeEnvio = (subtotal) => {
-    return subtotal + 50
-}
+// ver cómo hacer andar esto de abajo
 
-const obtenerCalculoDescuento = (precio) => {
-    let descuento = obtenerDescuento(precio) - precio
-    return descuento
-}
+// const obtenerDescuento = (subtotal) => {
+//     let descuento = subtotal - (subtotal * 0.1)
+//     return descuento
+// }
 
-const obtenerTotal = (precio) => {
-    let descuento = 0
-    let recargo = 0
-    let gastoDeEnvio = 0
-    if (tieneDescuento) {
-        descuento = obtenerCalculoDescuento(precio)
-    }
-    if (tieneRecargo) {
-        recargo = obtenerRecargo(precio) - precio
-    }
-    if (tieneGastosDeEnvio) {
-        gastoDeEnvio = obtenerGastosDeEnvio(precio) - precio
-    }
-    return precio + recargo + descuento + gastoDeEnvio
-}
+// const obtenerRecargo = (subtotal) => {
+//     return subtotal + (subtotal * 0.1)
+// }
+
+// const obtenerGastosDeEnvio = (subtotal) => {
+//     return subtotal + 50
+// }
+
+// const obtenerCalculoDescuento = (precio) => {
+//     let descuento = obtenerDescuento(precio) - precio
+//     return descuento
+// }
+
+// const obtenerTotal = (precio) => {
+//     let descuento = 0
+//     let recargo = 0
+//     let gastoDeEnvio = 0
+//     if (tieneDescuento) {
+//         descuento = obtenerCalculoDescuento(precio)
+//     }
+//     if (tieneRecargo) {
+//         recargo = obtenerRecargo(precio) - precio
+//     }
+//     if (tieneGastosDeEnvio) {
+//         gastoDeEnvio = obtenerGastosDeEnvio(precio) - precio
+//     }
+//     return precio + recargo + descuento + gastoDeEnvio
+// }
 
 
 // Búsqueda
