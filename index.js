@@ -12,6 +12,7 @@ const recargoParrafo = document.querySelector("#recargo")
 const checkboxTarjeta = document.querySelector("#tarjeta")
 const botonMostrarCarrito = document.querySelector("#abrir-carrito")
 const botonOcultarCarrito = document.querySelector("#cerrar-carrito")
+const overlay = document.getElementById("overlay")
 
 let tieneDescuento = true
 let tieneRecargo = true
@@ -22,15 +23,13 @@ let tieneGastosDeEnvio = false
 
 const subtotalProductos = 5999
 
-carrito.classList.add("no-mostrar")
-
 botonMostrarCarrito.onclick = () => {
  subtotal.textContent = subtotalProductos
- carrito.classList.remove("no-mostrar")
+ overlay.classList.remove("no-mostrar")
 }
 
 botonOcultarCarrito.onclick = () => {
-  carrito.classList.add("no-mostrar")
+  overlay.classList.add("no-mostrar")
 }
 
 checkboxTarjeta.onclick = () => {
