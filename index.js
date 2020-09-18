@@ -26,10 +26,14 @@ const subtotalProductos = 5999
 botonMostrarCarrito.onclick = () => {
  subtotal.textContent = subtotalProductos
  overlay.classList.remove("no-mostrar")
+ document.body.classList.add("no-scroll")
+ carrito.classList.add("mostrar-carrito")
 }
 
 botonOcultarCarrito.onclick = () => {
   overlay.classList.add("no-mostrar")
+  document.body.classList.remove("no-scroll")
+  carrito.classList.remove("mostrar-carrito")
 }
 
 checkboxTarjeta.onclick = () => {
