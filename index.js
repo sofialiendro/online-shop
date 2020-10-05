@@ -14,12 +14,35 @@ const botonMostrarCarrito = document.querySelector("#abrir-carrito")
 const botonOcultarCarrito = document.querySelector("#cerrar-carrito")
 const overlay = document.getElementById("overlay")
 
+const botonLista = document.querySelector(".fa-list")
+const contenedorProductos = document.querySelector(".contenedor-seccion-productos")
+const tarjetasProducto = document.querySelectorAll(".producto")
+const botonGrilla = document.querySelector(".fa-th")
+
+
+// Botones grilla y lista
+
+botonLista.onclick = () => {
+    contenedorProductos.classList.add("lista")
+
+    for (let tarjeta of tarjetasProducto) {
+        tarjeta.classList.add("tarjetasFlex")
+    }
+}
+
+botonGrilla.onclick = () => {
+    contenedorProductos.classList.remove("lista")
+
+    for (let tarjeta of tarjetasProducto) {
+        tarjeta.classList.remove("tarjetasFlex")
+    }
+}
+
+// Carrito
+
 let tieneDescuento = true
 let tieneRecargo = true
 let tieneGastosDeEnvio = false
-
-
-// Carrito
 
 const subtotalProductos = 5999
 

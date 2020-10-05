@@ -44,7 +44,7 @@ body {
 
 .texto-imagen-principal {
     position: absolute;
-    bottom: 40%;
+    font-size: 50px;
 }
 
 .contenedor-seccion-principal {
@@ -72,6 +72,8 @@ body {
 
 #abrir-carrito {
     margin-right: 150px;
+    font-family: "Quicksand";
+    font-size: 15px;
 }
 
 .carrito {
@@ -89,6 +91,7 @@ body {
     z-index: 5000;
     transition: 0.5s;
 }
+
 
 .formulario {
     display: flex;
@@ -185,7 +188,7 @@ button, input, label {
     font-size: 14px;
 }
 
-.view-btn {
+.view-btn, .fa-shopping-cart {
     font-size: 20px;
     color: #000;
     padding: 0;
@@ -210,10 +213,18 @@ button {
 }
 
 .producto {
-   background-color: #fff;
+    background-color: #fff;
     padding: 30px;
     text-align: center;
     margin: 10px;
+}
+
+.lista {
+    flex-direction: column;
+}
+
+.tarjetasFlex {
+    display: flex;
 }
 
 .producto:hover {
