@@ -18,23 +18,49 @@ const botonLista = document.querySelector(".fa-list")
 const contenedorProductos = document.querySelector(".contenedor-seccion-productos")
 const tarjetasProducto = document.querySelectorAll(".producto")
 const botonGrilla = document.querySelector(".fa-th")
-
+const descripcionProducto = document.querySelectorAll(".descripcion-producto")
+const botonesListaAgregarCarrito = document.querySelectorAll(".add-to-cart-btn")
+const contenedoresProductos = document.querySelectorAll(".product-body")
 
 // Botones grilla y lista
 
 botonLista.onclick = () => {
     contenedorProductos.classList.add("lista")
+    
+    for (let descripcion of descripcionProducto) {
+        descripcion.classList.remove("no-mostrar")
+    }
 
     for (let tarjeta of tarjetasProducto) {
-        tarjeta.classList.add("tarjetasFlex")
+        tarjeta.classList.add("productos-lista-flex")
+    }
+
+    for (let boton of botonesListaAgregarCarrito) {
+        boton.classList.add("boton-lista")
+    }
+
+    for (let contenedorProducto of contenedoresProductos) {
+        contenedorProducto.classList.add("contenedor-producto")
     }
 }
 
 botonGrilla.onclick = () => {
     contenedorProductos.classList.remove("lista")
-
+    
+    for (let descripcion of descripcionProducto) {
+        descripcion.classList.add("no-mostrar")
+    }
+    
     for (let tarjeta of tarjetasProducto) {
-        tarjeta.classList.remove("tarjetasFlex")
+        tarjeta.classList.remove("productos-lista-flex")
+    }
+
+    for (let boton of botonesListaAgregarCarrito) {
+        boton.classList.remove("boton-lista")
+    }
+
+    for (let contenedorProducto of contenedoresProductos) {
+        contenedorProducto.classList.remove("contenedor-producto")
     }
 }
 

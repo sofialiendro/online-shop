@@ -45,6 +45,9 @@ body {
 .texto-imagen-principal {
     position: absolute;
     font-size: 50px;
+    position: relative;
+    color: white;
+    font-family: "Dancing script";
 }
 
 .contenedor-seccion-principal {
@@ -212,6 +215,8 @@ button {
     padding: 0;
 }
 
+
+
 .producto {
     background-color: #fff;
     padding: 30px;
@@ -219,12 +224,22 @@ button {
     margin: 10px;
 }
 
-.lista {
-    flex-direction: column;
+.productos-lista-flex {
+    display: flex;
+    text-align: left;
 }
 
-.tarjetasFlex {
-    display: flex;
+.boton-lista {
+    max-width: 200px;
+}
+
+.contenedor-producto {
+    flex: 1;
+    margin: 50px;
+}
+
+.lista {
+    flex-direction: column;
 }
 
 .producto:hover {
@@ -239,8 +254,9 @@ button {
 }
   
 .product-img {
-    height: 100%;
+    width: 100%;
     margin: 0;
+    height: auto;
 }
 
 .product-img:hover {
