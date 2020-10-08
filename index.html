@@ -21,18 +21,64 @@
                 <div class="overlay no-mostrar" id="overlay"></div>
                 
                   <div class="carrito">
-                    <h2>Shopping Cart</h2>
-                    <p>Tus productos son</p>
-                    <p>Celular Samsung</p>
+                    <div class="carrito-cruz">
+                      <h2 class="titulo-carrito">Shopping Cart</h2>
+                      <button id="cerrar-carrito" class="fas fa-times"></button>
+                    </div>
+                    <p>2 product(s) added</p>
+                    <div class="productos-carrito-1-y-2">
+                      <article class="producto-carrito linea-divisoria">
+                        
+                        <div class="contenedor-imagen-producto-carrito">
+                          <img src="img/Products/1575022860_2_2292.jpg" alt="Comfortable Cat Bed" class="imagen-producto-carrito"/>
+                        </div>
+                        <div class="info-productos-carrito">
+                          <div class="info-producto-carrito carrito-cruz">
+                            <h3 class="titulo-carrito">Comfy Bed</h3><button class="far fa-trash-alt tacho-carrito"></button> 
+                          </div>
+                          <div class="info-producto-carrito-2 carrito-cruz">
+                            <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>units</p><p>$22.49</p>
+                          </div>
+                        </div>  
+                      </article>
+
+                      <article class="producto-carrito producto-carrito-2">
+                        
+                        <div class="contenedor-imagen-producto-carrito">
+                          <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" alt="Cat Oak Scratcher" class="imagen-producto-carrito"/>
+                        </div>
+                        <div class="info-productos-carrito">
+                          <div class="info-producto-carrito carrito-cruz">
+                            <h3 class="titulo-carrito">Oak Scratcher</h3><button class="far fa-trash-alt tacho-carrito"></button> 
+                          </div>
+                          <div class="info-producto-carrito-2 carrito-cruz">
+                            <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>units</p><p>$50.70</p>
+                          </div>
+                        </div>  
+                      </article>
+                    </div>
+
+                    <div class="subtotal">
+                      <p>Subtotal $73.19</p>
+                    </div>
+                    
+                    <button type="button" class="button" id="button-success">
+                      BUY
+                    </button>
+                    <button type="button" class="button" id="button-danger-outlined">
+                      CLEAR
+                    </button>
                 
-                    <label>Pagar con tarjeta
+                    <!-- <label>Pagar con tarjeta
                       <input type="checkbox" value="tarjeta" id="tarjeta">
                     </label>
                     <p id="recargo"></p>
                     <p id="subtotal">0</p>
-                    <p id="total">0</p>
+                    <p id="total">0</p> -->
+
+                    
                 
-                    <button id="cerrar-carrito">Exit</button>
+                    
                   </div>
                 
         </section>

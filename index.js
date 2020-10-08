@@ -66,14 +66,14 @@ botonGrilla.onclick = () => {
 
 // Carrito
 
-let tieneDescuento = true
-let tieneRecargo = true
-let tieneGastosDeEnvio = false
+// let tieneDescuento = true
+// let tieneRecargo = true
+// let tieneGastosDeEnvio = false
 
-const subtotalProductos = 5999
+// const subtotalProductos = 5999
 
 botonMostrarCarrito.onclick = () => {
- subtotal.textContent = subtotalProductos
+//  subtotal.textContent = subtotalProductos
  overlay.classList.remove("no-mostrar")
  document.body.classList.add("no-scroll")
  carrito.classList.add("mostrar-carrito")
@@ -85,11 +85,15 @@ botonOcultarCarrito.onclick = () => {
   carrito.classList.remove("mostrar-carrito")
 }
 
-checkboxTarjeta.onclick = () => {
-  const recargo = subtotalProductos * 0.1
-  recargoParrafo.textContent = recargo
-  total.textContent = subtotalProductos + recargo
-}
+// checkboxTarjeta.onclick = () => {
+//   const recargo = subtotalProductos * 0.1
+//   recargoParrafo.textContent = recargo
+//   total.textContent = subtotalProductos + recargo
+// }
+
+
+// Sección para pagar
+
 
 
 
