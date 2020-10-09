@@ -37,7 +37,7 @@
                             <h3 class="titulo-carrito">Comfy Bed</h3><button class="far fa-trash-alt tacho-carrito"></button> 
                           </div>
                           <div class="info-producto-carrito-2 carrito-cruz">
-                            <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>units</p><p>$22.49</p>
+                            <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>items</p><p>$22.49</p>
                           </div>
                         </div>  
                       </article>
@@ -52,7 +52,7 @@
                             <h3 class="titulo-carrito">Oak Scratcher</h3><button class="far fa-trash-alt tacho-carrito"></button> 
                           </div>
                           <div class="info-producto-carrito-2 carrito-cruz">
-                            <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>units</p><p>$50.70</p>
+                            <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>items</p><p>$50.70</p>
                           </div>
                         </div>  
                       </article>
@@ -62,25 +62,33 @@
                       <p>Subtotal $73.19</p>
                     </div>
                     
-                    <button type="button" class="button" id="button-success">
-                      BUY
-                    </button>
-                    <button type="button" class="button" id="button-danger-outlined">
-                      CLEAR
-                    </button>
-                
+                    <button type="button" class="button" id="button-success">BUY</button>
+                    
+                      
+                    <button type="button" class="button" id="boton-vaciar">CLEAR</button>
+                    
+                      
                     <!-- <label>Pagar con tarjeta
                       <input type="checkbox" value="tarjeta" id="tarjeta">
                     </label>
                     <p id="recargo"></p>
                     <p id="subtotal">0</p>
                     <p id="total">0</p> -->
-
-                    
-                
-                    
                   </div>
                 
+                <div class="overlay-cuadro-vaciar no-mostrar" id="overlay">
+                  
+                  <div class="cuadro-vaciar">
+                    <div class="contenedor-titulo-cuadro-vaciar">
+                      <h2 class="titulo-cuadro-vaciar">You're about to clear items. Do you want to continue?</h2>
+                    </div>
+                    <div class="contenedor-botones-cuadro-vaciar">
+                      <button type="button" class="boton-gris-cuadro-vaciar">CANCEL</button>
+                      <button type="button" class="boton-rojo-cuadro-vaciar">CLEAR</button>
+                    </div>
+                  </div>
+                </div>  
+
         </section>
     </header>
 

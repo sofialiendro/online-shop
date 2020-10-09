@@ -22,6 +22,13 @@ const descripcionProducto = document.querySelectorAll(".descripcion-producto")
 const botonesListaAgregarCarrito = document.querySelectorAll(".add-to-cart-btn")
 const contenedoresProductos = document.querySelectorAll(".product-body")
 
+const botonVaciar = document.querySelector("#boton-vaciar")
+const cuadroVaciar = document.querySelector(".cuadro-vaciar")
+const overlayCuadroVaciar = document.querySelector(".overlay-cuadro-vaciar")
+
+const botonVaciarCuadroVaciar = document.querySelector(".boton-rojo-cuadro-vaciar")
+const botonCancelarCuadroVaciar = document.querySelector(".boton-gris-cuadro-vaciar")
+
 // Botones grilla y lista
 
 botonLista.onclick = () => {
@@ -94,9 +101,6 @@ botonOcultarCarrito.onclick = () => {
 
 // Sección para pagar
 
-
-
-
 // ver cómo hacer andar esto de abajo
 
 // const obtenerDescuento = (subtotal) => {
@@ -132,6 +136,24 @@ botonOcultarCarrito.onclick = () => {
 //     }
 //     return precio + recargo + descuento + gastoDeEnvio
 // }
+
+// Botones carrito
+
+botonVaciar.onclick = () => {
+     overlayCuadroVaciar.classList.remove("no-mostrar")
+     document.body.classList.add("no-scroll")
+     cuadroVaciar.classList.add("mostrar-cuadro-vaciar")
+}
+
+botonCancelarCuadroVaciar.onclick = () => {
+    overlayCuadroVaciar.classList.add("no-mostrar")
+    cuadroVaciar.classList.remove("mostrar-cuadro-vaciar")
+}
+
+botonVaciarCuadroVaciar.onclick = () => {
+    overlayCuadroVaciar.classList.add("no-mostrar")
+    cuadroVaciar.classList.remove("mostrar-cuadro-vaciar")
+}
 
 
 // Búsqueda

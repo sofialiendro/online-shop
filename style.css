@@ -73,6 +73,15 @@ body {
     z-index: 1;
 }
 
+.overlay-cuadro-vaciar {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
 #abrir-carrito {
     margin-right: 150px;
     font-family: "Quicksand";
@@ -164,7 +173,7 @@ body {
 
 .subtotal {
     margin-top: 50px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 #button-success {
@@ -180,7 +189,7 @@ body {
     background-color: rgb(30, 121, 30);
 }
 
-#button-danger-outlined {
+#boton-vaciar {
     border: 1px solid red;
     color: red;
     background-color: #fff;
@@ -188,10 +197,67 @@ body {
     min-height: 50px;
 }
 
-#button-danger-outlined:hover {
+#boton-vaciar:hover {
     background-color: red;
     color:#fff;
 }
+
+.cuadro-vaciar {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 400px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    background: #fff;
+    z-index:1002;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-cuadro-vaciar {
+    text-align: center;
+}
+
+.boton-rojo-cuadro-vaciar {
+    background-color: red;
+    color: #fff;
+    width: 200px;
+    min-height: 50px;
+    border: 0;
+    border-radius: 5px;
+    font-family: "Quicksand";
+    margin-left: 20px;
+}
+
+.boton-rojo-cuadro-vaciar:hover {
+    background-color: rgb(211, 21, 21);
+}
+
+.boton-gris-cuadro-vaciar {
+    background-color: #f5f5f5;
+    color: black;
+    width: 200px;
+    min-height: 50px;
+    border: 0;
+    border-radius: 5px;
+    font-family: "Quicksand";
+}
+
+.boton-gris-cuadro-vaciar:hover {
+    background-color: rgba(185, 182, 182, 0.521);
+}
+
+
+.contenedor-botones-cuadro-vaciar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
 
 .formulario {
     display: flex;
@@ -466,6 +532,10 @@ ul {
 
 .mostrar-carrito {
     transform: translate(0);
+}
+
+.mostrar-cuadro-vaciar {
+    display: flex;
 }
 
 
