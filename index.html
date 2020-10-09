@@ -62,8 +62,8 @@
                       <p>Subtotal $73.19</p>
                     </div>
                     
-                    <button type="button" class="button" id="button-success">BUY</button>
-                    
+                    <button type="button" class="button" id="boton-comprar">BUY</button>
+                  
                       
                     <button type="button" class="button" id="boton-vaciar">CLEAR</button>
                     
@@ -75,15 +75,104 @@
                     <p id="subtotal">0</p>
                     <p id="total">0</p> -->
                   </div>
+
+                <div class="overlay-cuadro-comprar no-mostrar">
+                  <div class="cuadro-comprar">
+                    <div class="contenedor-titulo-cuadro-comprar">
+                      <h2 class="titulo-cuadro-comprar">Checkout</h2>
+                    </div>
+                    
+                    <div class="contenedor-datos-personales-resumen">
+                      <div class="contenedor-datos-personales">
+                        <div class="contenedor-titulo-datos-personales">
+                          <h3 class="titulo-datos-personales">Personal Details</h2>
+                        </div>
+                        <div class="contenedor-ingresar-datos-personales linea-divisoria-cuadro-comprar">
+                          <p class="ingresar-datos-personales-1">Name and Lastname *</p>
+                          <div class="input-ingresar-datos-personales-1">
+                            <input type="text" placeholder="e.g. Sofía Liendro" id="ingresar-nombre-completo">
+                          </div>
+                          <p class="ingresar-datos-personales-2">Email *</p>
+                          <div class="input-ingresar-datos-personales-2">
+                            <input type="text" placeholder="e.g. sofialiendro.s@gmail.com" id="ingresar-email">
+                          </div>
+                        </div>
+                      </div>
+
+                      <section class="resumen">
+                        <div>
+                          <h3 class="titulo-opciones-pago">Overview</h2>
+                        </div>
+                        <br>
+                        <div class="contenedor-subtotal">
+                          <p class="subtotal-opciones-pago">Subtotal</p>
+                          <p class="subtotal-precio-opciones-pago">$73.19</p>
+                        </div>
+                        <div class="contenedor-giftcard no-mostrar">
+                          <p class="giftcard-opciones-pago">10% off</p>
+                          <p class="giftcard-precio-opciones-pago"></p>
+                        </div>
+                        <div class="contenedor-delivery no-mostrar">
+                          <p class="delivery-opciones-pago">Delivery</p>
+                          <p class="delivery-precio-opciones-pago"></p>
+                        </div>
+                        <div class="contenedor-recargo no-mostrar">
+                          <p class="recargo-opciones-pago">Card Fee</p>
+                          <p class="recargo-precio-opciones-pago">$7.31</p>
+                        </div>
+                        <div class="contenedor-total">
+                          <p class="total-opciones-pago">Total: </p>
+                          <p class="total-precio-opciones-pago"></p>
+                        </div>    
+
+                      </section>
+                    </div>
+
+                    <div class="contenedor-opciones-pago">
+                      <div class="contenedor-titulo-opciones-pago">
+                        <h3 class="titulo-opciones-pago">Payment Options</h2>
+                      </div>
+                      <div class="contenedor-botones-opciones-pago">
+                        <label>
+                          <input type="radio" name="pago" checked value="debito" id="boton-debito"> Debit card
+                        </label>
+                        <label>
+                          <input type="radio" name="pago" value="credito" id="boton-credito"> Credit card
+                        </label>
+                        <label>
+                          <input type="checkbox" name="envio" id="boton-delivery"> Add delivery
+                        </label>
+                        <label>
+                          <input type="checkbox" name="tarjeta-regalo" id="boton-giftcard"> Add gift card
+                        </label>
+                      </div>
+                    </div>
+
+                    <footer class="botones-footer-cuadro-comprar">
+                      <button type="button" class="boton-gris-cuadro-vaciar">
+                        KEEP SHOPPING
+                      </button>
+                      <button type="submit" class="boton-enviar-formulario">
+                        SUBMIT
+                      </button>
+                    </footer>
+
+
+
+
+
+
+                  </div>
+                </div>
                 
-                <div class="overlay-cuadro-vaciar no-mostrar" id="overlay">
+                <div class="overlay-cuadro-vaciar no-mostrar">
                   
                   <div class="cuadro-vaciar">
                     <div class="contenedor-titulo-cuadro-vaciar">
                       <h2 class="titulo-cuadro-vaciar">You're about to clear items. Do you want to continue?</h2>
                     </div>
                     <div class="contenedor-botones-cuadro-vaciar">
-                      <button type="button" class="boton-gris-cuadro-vaciar">CANCEL</button>
+                      <button type="button" class="boton-gris-cuadro-vaciar" id="boton-cancelar">CANCEL</button>
                       <button type="button" class="boton-rojo-cuadro-vaciar">CLEAR</button>
                     </div>
                   </div>

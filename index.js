@@ -27,7 +27,16 @@ const cuadroVaciar = document.querySelector(".cuadro-vaciar")
 const overlayCuadroVaciar = document.querySelector(".overlay-cuadro-vaciar")
 
 const botonVaciarCuadroVaciar = document.querySelector(".boton-rojo-cuadro-vaciar")
-const botonCancelarCuadroVaciar = document.querySelector(".boton-gris-cuadro-vaciar")
+const botonCancelarCuadroVaciar = document.querySelector("#boton-cancelar")
+
+const botonComprar = document.querySelector("#boton-comprar")
+const cuadroComprar = document.querySelector(".cuadro-comprar")
+const overlayCuadroComprar = document.querySelector(".overlay-cuadro-comprar")
+
+const botonDebito = document.querySelector("#boton-debito")
+const recargoCredito = document.querySelector(".contenedor-recargo")
+const botonCredito = document.querySelector("#boton-credito")
+
 
 // Botones grilla y lista
 
@@ -99,6 +108,33 @@ botonOcultarCarrito.onclick = () => {
 // }
 
 
+// Botones carrito
+
+botonVaciar.onclick = () => {
+     overlayCuadroVaciar.classList.remove("no-mostrar")
+     document.body.classList.add("no-scroll")
+     cuadroVaciar.classList.add("mostrar-cuadro-vaciar")
+}
+
+botonCancelarCuadroVaciar.onclick = () => {
+    console.log("click")
+    overlayCuadroVaciar.classList.add("no-mostrar")
+    cuadroVaciar.classList.remove("mostrar-cuadros")
+    
+}
+
+botonVaciarCuadroVaciar.onclick = () => {
+    overlayCuadroVaciar.classList.add("no-mostrar")
+    cuadroVaciar.classList.remove("mostrar-cuadros")
+}
+
+botonComprar.onclick = () => {
+    overlayCuadroComprar.classList.remove("no-mostrar")
+    document.body.classList.add("no-scroll")
+    cuadroComprar.classList.add("mostrar-cuadros")
+}
+
+
 // Sección para pagar
 
 // ver cómo hacer andar esto de abajo
@@ -136,24 +172,6 @@ botonOcultarCarrito.onclick = () => {
 //     }
 //     return precio + recargo + descuento + gastoDeEnvio
 // }
-
-// Botones carrito
-
-botonVaciar.onclick = () => {
-     overlayCuadroVaciar.classList.remove("no-mostrar")
-     document.body.classList.add("no-scroll")
-     cuadroVaciar.classList.add("mostrar-cuadro-vaciar")
-}
-
-botonCancelarCuadroVaciar.onclick = () => {
-    overlayCuadroVaciar.classList.add("no-mostrar")
-    cuadroVaciar.classList.remove("mostrar-cuadro-vaciar")
-}
-
-botonVaciarCuadroVaciar.onclick = () => {
-    overlayCuadroVaciar.classList.add("no-mostrar")
-    cuadroVaciar.classList.remove("mostrar-cuadro-vaciar")
-}
 
 
 // Búsqueda
