@@ -48,6 +48,7 @@ mostrarSubtotal.textContent = "$" + subtotal;
 
 let total = 72;
 const mostrarTotal = document.querySelector(".total-precio-opciones-pago");
+// mostrarTotal.textContent = "$" + total;
 
 const mostrarDescuento = document.querySelector(".giftcard-precio-opciones-pago");
 
@@ -186,21 +187,24 @@ let tieneDescuento = true
 let tieneRecargo = true
 let tieneGastosDeEnvio = false
 
-const obtenerTotal = (subtotal) => {
-    // let descuento = 0
-    // let recargo = 0
-    // let gastoDeEnvio = 0
-    if (tieneDescuento) {
-        precioDescuento = obtenerDescuento(precio)
-    }
-    if (tieneRecargo) {
-        precioRecargo = obtenerRecargo(subtotal) - subtotal
-    }
-    if (tieneGastosDeEnvio) {
-        precioDelivery = delivery - subtotal
-    }
-    return subtotal + recargo + descuento + delivery
-}
+// const obtenerTotal = () => {
+//     // let descuento = 0
+//     // let recargo = 0
+//     // let gastoDeEnvio = 0
+//     if (botonDescuento.onclick) {
+//         console.log(mostrarTotal.textContent = "$" + obtenerDescuento(subtotal) + subtotal)
+//     }
+    
+//     // if (tieneRecargo) {
+//     //     precioRecargo = obtenerRecargo(subtotal) - subtotal
+//     // }
+//     // if (tieneGastosDeEnvio) {
+//     //     precioDelivery = delivery - subtotal
+//     // }
+//     // return subtotal + recargo + descuento + delivery
+// }
+
+
 
 botonCredito.onclick = () => {
     recargoCredito.classList.remove("no-mostrar")
@@ -214,10 +218,16 @@ botonDelivery.onclick = () => {
     recargoDelivery.classList.toggle("no-mostrar")
 }
 
-botonDescuento.onclick = () => {
-    descuentoGiftCard.classList.toggle("no-mostrar")
-}
+const obtenerTotal = () => {
+    if (botonDescuento.onclick) {
+        descuentoGiftCard.classList.toggle("no-mostrar")
+        mostrarTotal.textContent = "$" + (subtotal - obtenerDescuento(subtotal))
+    }
 
+    else {
+        mostrarTotal.textContent = "$" + subtotal
+    }
+}
 
 
 // Búsqueda
