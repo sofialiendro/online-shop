@@ -67,13 +67,7 @@
                       
                     <button type="button" class="button" id="boton-vaciar">CLEAR</button>
                     
-                      
-                    <!-- <label>Pagar con tarjeta
-                      <input type="checkbox" value="tarjeta" id="tarjeta">
-                    </label>
-                    <p id="recargo"></p>
-                    <p id="subtotal">0</p>
-                    <p id="total">0</p> -->
+
                   </div>
 
                 <div class="overlay-cuadro-comprar no-mostrar">
@@ -215,23 +209,23 @@
                     <div class="contenedor-botones-aside-3 formulario">
                         <h3>CATEGORY</h3>
                             <label for="categorias">
-                                <input type="checkbox" name="categoria" class="categorias" value="cats"> CATS
+                                <input type="checkbox" name="categoria" class="categorias checkbox1" value="cats"> CATS
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="categoria" class="categorias" value="dogs"> DOGS
+                                <input type="checkbox" name="categoria" class="categorias checkbox1" value="dogs"> DOGS
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="categoria" class="categorias" value="hamsters"> HAMSTERS
+                                <input type="checkbox" name="categoria" class="categorias checkbox1" value="hamsters"> HAMSTERS
                             </label>
                             <label for="categorias">
-                                <input type="checkbox" name="categoria" class="categorias" value="bunnies"> BUNNIES
+                                <input type="checkbox" name="categoria" class="categorias checkbox1" value="bunnies"> BUNNIES
                             </label>
                     </div>
                     
                     <div class="contenedor-botones-aside-4 formulario">
                         <h3>RATING</h3>
                             <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="5" aria-label="Five stars">
+                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -239,7 +233,7 @@
                                 <i class="fas fa-star"></i> (5)
                             </label>
                             <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="4" aria-label="Four stars">
+                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -247,7 +241,7 @@
                                 <i class="far fa-star"></i> (4)
                             </label>
                             <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="3" aria-label="Three stars">
+                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -255,7 +249,7 @@
                                 <i class="far fa-star"></i> (3)
                             </label>
                             <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="2" aria-label="Two stars">
+                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -263,7 +257,7 @@
                                 <i class="far fa-star"></i> (2)
                             </label>
                             <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox" value="1" aria-label="One star">
+                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star">
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -277,7 +271,9 @@
             <div class="seccion-productos">
               <div class="contenedor-barra-principal-productos">
                    
-                <p>Showing 12 product(s) out of 12</p>
+                <p class="cantidad-de-productos">
+                  Showing <span class="cantidad-mostrada">12</span> product(s) of <span class="cantidad-total-productos">12 </span>
+                </p>
                   
                 <div class="view-buttons">
                   View as
@@ -295,7 +291,7 @@
                     <article class="producto"
                     data-nombre="bed"
                     data-categoria="cats"
-                    data-precio="22.49"
+                    data-precio="22"
                     data-puntaje="3"
                     >
                       <div class="product-img-container">
@@ -323,9 +319,9 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="scartcher"
+                    data-nombre="scratcher"
                     data-categoria="cats"
-                    data-precio="50.70"
+                    data-precio="50"
                     data-puntaje="5"
                     >
                       <div class="product-img-container">

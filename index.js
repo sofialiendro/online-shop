@@ -6,10 +6,6 @@ const productos = document.getElementsByClassName("productos");
 const filtroCategoria = document.getElementsByClassName("categorias");
 
 const carrito = document.querySelector(".carrito");
-// const subtotal = document.querySelector("#subtotal")
-// const total = document.querySelector("#total")
-// const recargoParrafo = document.querySelector("#recargo")
-// const checkboxTarjeta = document.querySelector("#tarjeta")
 const botonMostrarCarrito = document.querySelector("#abrir-carrito");
 const botonOcultarCarrito = document.querySelector("#cerrar-carrito");
 const overlay = document.getElementById("overlay");
@@ -112,7 +108,6 @@ botonGrilla.onclick = () => {
 
 
 botonMostrarCarrito.onclick = () => {
-  //  subtotal.textContent = subtotalProductos
   overlay.classList.remove("no-mostrar");
   document.body.classList.add("no-scroll");
   carrito.classList.add("mostrar-carrito");
@@ -124,11 +119,6 @@ botonOcultarCarrito.onclick = () => {
   carrito.classList.remove("mostrar-carrito");
 };
 
-// checkboxTarjeta.onclick = () => {
-//   const recargo = subtotalProductos * 0.1
-//   recargoParrafo.textContent = recargo
-//   total.textContent = subtotalProductos + recargo
-// }
 
 // Cuadro comprar
 
@@ -298,35 +288,58 @@ const calcularTotalCompleto = () => {
 
 
 
-// Boton Submit
+// Cantidad de productos mostrados
+
+const cantidadMostrada = document.querySelector(".cantidad-mostrada");
+const checkboxes = document.querySelectorAll(".checkboxes1");
+const totalProductos = document.querySelector(".cantidad-total-productos")
 
 
-// const validateForm = () => {
-//     let x = document.forms("formulario-email")("email").name;
-//     if (x == "") {
-//       alert("Name must be filled out");
-//       return false;
-//     }
+// busquedaProductos.oninput = () => {
+//   checkboxSeleccionado();
+//   coincidenCheckboxYTarjeta();
+//   filtrarTarjetas;
+//   cantidadProductosMostrados();
+  
+// };
+
+// for (let checkbox of checkboxes) {
+//   checkbox.onclick = () => {
+//     checkboxSeleccionado();
+//     checkboxSeleccionado();
+//     coincidenCheckboxYTarjeta();
+//     filtrarTarjetas;
+
+//     cantidadProductosMostrados();
+//   };
 // }
 
+// const cantidadProductosNoMostrados = document.getElementsByClassName("producto no-mostrar");
 
-
-
+// const cantidadProductosMostrados = () => {
+//   productosMostrados = tarjetasProducto.length - cantidadProductosNoMostrados.length;
+//   cantidadMostrada.textContent = productosMostrados;
+//   totalProductos.textContent = tarjetasProducto.length;
+// };
 
 // Búsqueda
 
-busquedaProductos.oninput = () => {
-  for (let tarjeta of tarjetas) {
-    const titulo = tarjeta.dataset.nombre;
-    const busqueda = busquedaProductos.value;
+const buscarProductos = () => {
 
-    if (titulo.includes(busqueda)) {
-      tarjeta.classList.remove("no-mostrar");
-    } else {
-      tarjeta.classList.add("no-mostrar");
+
+  if (busquedaProductos.oninput) {
+    for (let tarjeta of tarjetas) {
+      const titulo = tarjeta.dataset.nombre;
+      const busqueda = busquedaProductos.value;
+
+      if (titulo.includes(busqueda)) {
+        tarjeta.classList.remove("no-mostrar");
+      } else {
+        tarjeta.classList.add("no-mostrar");
+      }
     }
-  }
-};
+  };
+}
 
 // Filtro puntaje
 
@@ -383,9 +396,6 @@ const filtrarTarjetas = () => {
 
 botonLimpiar.onclick = () => {
   busquedaProductos.value = "";
-  for (let checkbox of checkboxes) {
-    checkbox.checked = false;
-  }
   tarjeta.classList.remove("no-mostrar");
 };
 
