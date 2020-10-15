@@ -88,14 +88,14 @@
                               <h3 class="titulo-datos-personales">Personal Details</h2>
                             </div>
                             <div class="contenedor-ingresar-datos-personales linea-divisoria-cuadro-comprar">
-                              <p class="ingresar-datos-personales-1">Name and Lastname *</p>
-                              <div class="input-ingresar-datos-personales-1">
-                                <input type="text" placeholder="e.g. Sofía Liendro" id="ingresar-nombre-completo" required>
-                              </div>
-                              <p class="ingresar-datos-personales-2">Email *</p>
-                              <div class="input-ingresar-datos-personales-2">
-                                <input type="text" placeholder="e.g. sofialiendro.s@gmail.com" id="ingresar-email" required>
-                              </div>
+                                <p class="ingresar-datos-personales-1">Name and Lastname *</p>
+                              <form class="input-ingresar-datos-personales-1" id="form-cuadro-comprar" name="formulario-email-nombre">
+                                <input type="text" placeholder="e.g. Sofía Liendro" name="name-lastname" id="ingresar-nombre-completo" required>
+                              
+                                <p class="ingresar-datos-personales-2">Email *</p>
+                              
+                                <input type="email" placeholder="e.g. sofialiendro.s@gmail.com" id="ingresar-email" name="email" required>
+                              </form>
                             </div>
                           </div>
 
@@ -105,16 +105,16 @@
                             </div>
                             <form class="contenedor-botones-opciones-pago">
                               <label>
-                                <input type="radio" name="pago" checked value="debito" id="boton-debito"> Debit card
+                                <input class="metodos-de-pago" type="radio" name="pago" checked value="debito" id="boton-debito"> Debit card
                               </label>
                               <label>
-                                <input type="radio" name="pago" value="credito" id="boton-credito"> Credit card
+                                <input class="metodos-de-pago" type="radio" name="pago" value="credito" id="boton-credito"> Credit card
                               </label>
                               <label>
-                                <input type="checkbox" name="envio" id="boton-delivery"> Add delivery
+                                <input class="metodos-de-pago" type="checkbox" name="envio" value="delivery" id="boton-delivery"> Add delivery
                               </label>
                               <label>
-                                <input type="checkbox" name="tarjeta-regalo" id="boton-giftcard"> Add gift card
+                                <input class="metodos-de-pago" type="checkbox" name="tarjeta-regalo" value="giftcard" id="boton-giftcard"> Add gift card
                               </label>
                             </form>
                           </div>
@@ -133,15 +133,15 @@
                               <p class="subtotal-opciones-pago">Subtotal</p>
                               <p class="subtotal-precio-opciones-pago">0</p>
                             </div>
-                            <div class="contenedor-giftcard no-mostrar">
-                              <p class="giftcard-opciones-pago">20% OFF</p>
+                            <div class="contenedor-giftcard no-mostrar recargo">
+                              <p class="giftcard-opciones-pago">5% OFF</p>
                               <p class="giftcard-precio-opciones-pago">0</p>
                             </div>
-                            <div class="contenedor-delivery no-mostrar">
+                            <div class="contenedor-delivery no-mostrar recargo">
                               <p class="delivery-opciones-pago">Delivery</p>
                               <p class="delivery-precio-opciones-pago">0</p>
                             </div>
-                            <div class="contenedor-recargo no-mostrar">
+                            <div class="contenedor-recargo no-mostrar recargo">
                               <p class="recargo-opciones-pago">Card Fee</p>
                               <p class="recargo-precio-opciones-pago">0</p>
                             </div>
@@ -160,9 +160,11 @@
                       <button type="button" id="boton-seguir-comprando" class="boton-gris-cuadro-vaciar">
                         KEEP SHOPPING
                       </button>
-                      <button type="submit" class="boton-enviar-formulario">
-                        SUBMIT
-                      </button>
+                      <form>
+                        <button type="submit" form="form-cuadro-comprar" value="Submit" class="boton-enviar-formulario">
+                          SUBMIT
+                        </button>
+                      </form>
                     </footer>
 
 

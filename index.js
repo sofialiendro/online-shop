@@ -48,16 +48,21 @@ mostrarSubtotal.textContent = "$" + subtotal;
 
 let total = 72;
 const mostrarTotal = document.querySelector(".total-precio-opciones-pago");
-// mostrarTotal.textContent = "$" + total;
+mostrarTotal.textContent = "$" + total;
 
 const mostrarDescuento = document.querySelector(".giftcard-precio-opciones-pago");
 
-const delivery = 15;
+const delivery = 300;
 const mostrarDelivery = document.querySelector(".delivery-precio-opciones-pago");
 mostrarDelivery.textContent = "$" + delivery;
 
 const mostrarRecargo = document.querySelector(".recargo-precio-opciones-pago");
 
+
+
+const form = document.querySelector(".boton-enviar-formulario")
+const inputNombre = document.querySelector("#ingresar-nombre-completo")
+const inputEmail = document.querySelector("#ingresar-email")
 
 
 // Botones grilla y lista
@@ -162,7 +167,7 @@ botonSeguirComprando.onclick = () => {
 // ver cómo hacer andar esto de abajo
 
 const obtenerDescuento = (subtotal) => {
-    return (subtotal * 0.2)
+    return (subtotal * 0.05)
 }
 
 mostrarDescuento.textContent = "$" + obtenerDescuento(subtotal);
@@ -206,28 +211,106 @@ let tieneGastosDeEnvio = false
 
 
 
-botonCredito.onclick = () => {
-    recargoCredito.classList.remove("no-mostrar")
-}
+// botonCredito.onclick = () => {
+//     recargoCredito.classList.remove("no-mostrar")
+//     mostrarTotal.textContent = "$" + (subtotal + obtenerRecargo(subtotal))
+// }
 
-botonDebito.onclick = () => {
-    recargoCredito.classList.add("no-mostrar")
-}
+// botonDebito.onclick = () => {
+//     recargoCredito.classList.add("no-mostrar")
+//     mostrarTotal.textContent = "$" + (subtotal)
+// }
 
-botonDelivery.onclick = () => {
-    recargoDelivery.classList.toggle("no-mostrar")
-}
+// botonDelivery.onclick = () => {
+//     recargoDelivery.classList.toggle("no-mostrar")
+//     mostrarTotal.textContent = "$" + (subtotal + delivery)
+// }
 
-const obtenerTotal = () => {
-    if (botonDescuento.onclick) {
-        descuentoGiftCard.classList.toggle("no-mostrar")
-        mostrarTotal.textContent = "$" + (subtotal - obtenerDescuento(subtotal))
-    }
+// botonDescuento.onclick = () => {
+//     descuentoGiftCard.classList.toggle("no-mostrar")
+//     mostrarTotal.textContent = "$" + (subtotal - obtenerDescuento(subtotal))
+// }
 
-    else {
-        mostrarTotal.textContent = "$" + subtotal
-    }
+
+
+let subtotalEnNumero = Number(subtotal);
+
+const metodosDePago = document.querySelectorAll(".metodos-de-pago")
+const recargos = document.querySelectorAll(".recargo")
+const inputCredito = document.querySelector("input[value='credito']")
+const inputDescuento = document.querySelector("input[value='giftcard']")
+const inputDelivery = document.querySelector("input[value='delivery']")
+
+
+for (let metodo of metodosDePago) {
+  metodo.oninput = () => {
+    calcularTotalCompleto();
+  };
 }
+let resultadoRecargo;
+
+const recargoTarjeta = () => {
+  if (inputCredito.checked) {
+    resultadoRecargo = subtotalEnNumero * 0.1;
+    console.log(resultadoRecargo);
+    mostrarRecargo.textContent = '$' + resultadoRecargo;
+    recargoCredito.classList.remove("no-mostrar");
+  } else {
+    resultadoRecargo = 0;
+    recargoCredito.classList.add("no-mostrar");
+  }
+  return resultadoRecargo;
+};
+
+let resultadoDescuento;
+
+const aplicarDescuento = () => {
+  if (inputDescuento.checked) {
+    resultadoDescuento = -subtotalEnNumero * 0.05;
+    mostrarDescuento.textContent = '$' + resultadoDescuento;
+    descuentoGiftCard.classList.remove("no-mostrar");
+  } else {
+    resultadoDescuento = 0;
+    descuentoGiftCard.classList.add("no-mostrar");
+  }
+  return resultadoDescuento;
+};
+
+let resultadoEnvio;
+
+const recargoEnvio = () => {
+  if (inputDelivery.checked) {
+    resultadoEnvio = 300;
+    mostrarDelivery.textContent = '$' + resultadoEnvio;
+    recargoDelivery.classList.remove("no-mostrar");
+  } else {
+    resultadoEnvio = 0;
+    recargoDelivery.classList.add("no-mostrar");
+  }
+  return resultadoEnvio;
+};
+
+const calcularTotalCompleto = () => {
+  let totalCompleto = subtotalEnNumero + recargoEnvio()  + recargoTarjeta() + aplicarDescuento();
+  mostrarTotal.textContent = '$' + totalCompleto.toFixed(2);
+  return totalCompleto;
+};
+
+
+
+// Boton Submit
+
+
+// const validateForm = () => {
+//     let x = document.forms("formulario-email")("email").name;
+//     if (x == "") {
+//       alert("Name must be filled out");
+//       return false;
+//     }
+// }
+
+
+
 
 
 // Búsqueda
