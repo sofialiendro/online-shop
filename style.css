@@ -24,7 +24,7 @@ html {
     justify-content: space-between;
 }
 
-#contenedor-icono-header {
+.contenedor-icono-header {
     margin-left: 150px;
 }
 
@@ -790,6 +790,15 @@ ul {
         justify-content: space-between;
         
         margin: 5px;
+    }
+
+    .contenedor-icono-header {
+        margin: 10px;
+        
+    }
+
+    #abrir-carrito {
+        margin: 10px;
     }
 
     .mostrar-seccion-aside-responsive {
