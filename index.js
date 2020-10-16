@@ -1,3 +1,4 @@
+
 const busquedaProductos = document.querySelector("#buscar-productos");
 const tarjetas = document.getElementsByTagName("article");
 const filtroPuntaje = document.getElementsByClassName("rating-checkbox");
@@ -59,6 +60,13 @@ const mostrarRecargo = document.querySelector(".recargo-precio-opciones-pago");
 const form = document.querySelector(".boton-enviar-formulario")
 const inputNombre = document.querySelector("#ingresar-nombre-completo")
 const inputEmail = document.querySelector("#ingresar-email")
+
+//Responsive
+
+const botonFiltro = document.querySelector(".boton-filtro")
+const overlayFiltrosResponsive = document.querySelector(".overlay-seccion-aside-responsive")
+const seccionFiltrosResponsive = document.querySelector(".seccion-aside-responsive")
+const botonCerrarAsideResponsive = document.querySelector("#boton-cerrar-aside-responsive")
 
 
 // Botones grilla y lista
@@ -287,42 +295,11 @@ const calcularTotalCompleto = () => {
 };
 
 
-
-// Cantidad de productos mostrados
-
-const cantidadMostrada = document.querySelector(".cantidad-mostrada");
-const checkboxes = document.querySelectorAll(".checkboxes1");
-const totalProductos = document.querySelector(".cantidad-total-productos")
-
-
-// busquedaProductos.oninput = () => {
-//   checkboxSeleccionado();
-//   coincidenCheckboxYTarjeta();
-//   filtrarTarjetas;
-//   cantidadProductosMostrados();
-  
-// };
-
-// for (let checkbox of checkboxes) {
-//   checkbox.onclick = () => {
-//     checkboxSeleccionado();
-//     checkboxSeleccionado();
-//     coincidenCheckboxYTarjeta();
-//     filtrarTarjetas;
-
-//     cantidadProductosMostrados();
-//   };
-// }
-
-// const cantidadProductosNoMostrados = document.getElementsByClassName("producto no-mostrar");
-
-// const cantidadProductosMostrados = () => {
-//   productosMostrados = tarjetasProducto.length - cantidadProductosNoMostrados.length;
-//   cantidadMostrada.textContent = productosMostrados;
-//   totalProductos.textContent = tarjetasProducto.length;
-// };
-
 // Búsqueda
+
+busquedaProductos.oninput = (e) => {
+  buscarProductos()
+}
 
 const buscarProductos = () => {
 
@@ -340,6 +317,7 @@ const buscarProductos = () => {
     }
   };
 }
+
 
 // Filtro puntaje
 
@@ -392,12 +370,7 @@ const filtrarTarjetas = () => {
   }
 };
 
-// Botón limpiar
 
-botonLimpiar.onclick = () => {
-  busquedaProductos.value = "";
-  tarjeta.classList.remove("no-mostrar");
-};
 
 // Filtro categorías
 
@@ -405,4 +378,53 @@ for (let checkbox of filtroCategoria) {
   checkbox.onclick = () => {
     filtrarTarjetas();
   };
+}
+
+// Botón limpiar
+
+botonLimpiar.onclick = () => {
+  busquedaProductos.value = "";
+  tarjeta.classList.remove("no-mostrar");
+};
+
+// Cantidad de productos mostrados
+
+const cantidadMostrada = document.querySelector(".cantidad-mostrada");
+const checkboxes = document.querySelectorAll("input[type='checkbox']");
+
+
+busquedaProductos.oninput = () => {
+  buscarProductos();
+  cantidadProductosMostrados();
+  
+};
+
+for (let checkbox of checkboxes) {
+  checkbox.onclick = () => {
+    filtrarTarjetas();
+    cantidadProductosMostrados();
+  };
+}
+
+const cantidadProductosNoMostrados = document.getElementsByClassName("producto no-mostrar");
+
+const cantidadProductosMostrados = () => {
+  productosMostrados = tarjetasProducto.length - cantidadProductosNoMostrados.length;
+  cantidadMostrada.textContent = productosMostrados;
+};
+
+
+// Responsive 
+
+botonFiltro.onclick = () => {
+  overlayFiltrosResponsive.classList.remove("no-mostrar")
+  document.body.classList.add("no-scroll");
+  seccionFiltrosResponsive.classList.add("mostrar-seccion-aside-responsive")
+  
+}
+
+botonCerrarAsideResponsive.onclick = () => {
+  overlayFiltrosResponsive.classList.add("no-mostrar")
+  document.body.classList.remove("no-scroll");
+  seccionFiltrosResponsive.classList.remove("mostrar-seccion-aside-responsive")
 }

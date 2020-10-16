@@ -191,7 +191,7 @@
 
     <section class="contenedor-seccion-principal">
         <div class="seccion-principal">
-            <aside class="seccion-aside">
+            <aside class="seccion-aside" id="seccion-aside-mostrada">
                 <form class="formulario-principal" name="form-princ">
                     <div class="contenedor-botones-aside-1">
                         <h3 class="filtros">FILTERS</h3>
@@ -268,12 +268,12 @@
                 </form>
             </aside>
 
+            
             <div class="seccion-productos">
               <div class="contenedor-barra-principal-productos">
                    
                 <p class="cantidad-de-productos">
-                  Showing <span class="cantidad-mostrada">12</span> product(s) of <span class="cantidad-total-productos">12 </span>
-                </p>
+                  Showing <span class="cantidad-mostrada">12</span> product(s) of 12
                   
                 <div class="view-buttons">
                   View as
@@ -284,12 +284,21 @@
                     <i class="fas fa-list" aria-label="List icon"></i>
                   </button>
                 </div>
+
+                <div class="boton-responsive-filtro no-mostrar">
+                  
+                  <button type="button" class="view-btn boton-filtro">
+                    <i class="fas fa-filter" aria-label="Filter icon"></i><p class="texto-filters-responsive">Filters</p>
+                  </button>
+                  
+                </div>
+
               </div>
 
                 <section class="contenedor-seccion-productos">
                   <div>
                     <article class="producto"
-                    data-nombre="bed"
+                    data-nombre="comfy bed"
                     data-categoria="cats"
                     data-precio="22"
                     data-puntaje="3"
@@ -319,7 +328,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="scratcher"
+                    data-nombre="oak scratcher"
                     data-categoria="cats"
                     data-precio="50"
                     data-puntaje="5"
@@ -349,7 +358,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="tree"
+                    data-nombre="carrot tree"
                     data-categoria="bunnies"
                     data-precio="26.39"
                     data-puntaje="2"
@@ -379,7 +388,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="feeder"
+                    data-nombre="interactive feeder"
                     data-categoria="dogs"
                     data-precio="20.99"
                     data-puntaje="3"
@@ -409,7 +418,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="bed"
+                    data-nombre="bed with removable cover"
                     data-categoria="dogs"
                     data-precio="49.99"
                     data-puntaje="5"
@@ -439,7 +448,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="toy"
+                    data-nombre="toy bridge"
                     data-categoria="hamsters"
                     data-precio="10.30"
                     data-puntaje="1"
@@ -469,7 +478,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="house"
+                    data-nombre="grass house"
                     data-categoria="bunnies"
                     data-precio="19.99"
                     data-puntaje="3"
@@ -499,7 +508,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="food"
+                    data-nombre="food maze"
                     data-categoria="cats"
                     data-precio="32.50"
                     data-puntaje="2"
@@ -529,7 +538,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="brushes"
+                    data-nombre="professional brushes set"
                     data-categoria="dogs"
                     data-precio="30.25"
                     data-puntaje="4"
@@ -559,7 +568,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="bed"
+                    data-nombre="soft bed"
                     data-categoria="hamsters"
                     data-precio="15.99"
                     data-puntaje="3"
@@ -589,7 +598,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="toys"
+                    data-nombre="rope toys set"
                     data-categoria="bunnies"
                     data-precio="12.30"
                     data-puntaje="4"
@@ -619,7 +628,7 @@
 
                 <div>
                     <article class="producto"
-                    data-nombre="feeder"
+                    data-nombre="automatic feeder"
                     data-categoria="hamsters"
                     data-precio="35.99"
                     data-puntaje="5"
@@ -674,6 +683,87 @@
         </div>
       </div>  
     </footer>
+
+    <div class="overlay-seccion-aside-responsive no-mostrar">
+      <div class="seccion-aside-responsive">
+        <form class="formulario-principal" name="form-princ">
+           <button id="boton-cerrar-aside-responsive" class="fas fa-times"></button>
+            <div class="contenedor-botones-aside-responsive-1">
+                
+                <h3 class="filtros">FILTERS</h3>
+                <button class="filters-clear-btn"><i class="fas fa-trash-alt"></i> CLEAR</button>
+            </div>
+                
+            <div class="contenedor-botones-aside-responsive-2">
+                <h3 class="buscar">SEARCH</h3>
+                        <div class="contenedor-busqueda" class="boton-buscar">
+                            <input type="text" placeholder="Search products" id="buscar-productos">
+                            <i class="fas fa-search" aria-label="Magnifier icon"></i>
+                        </div>
+            </div>
+            
+            <div class="contenedor-botones-aside-responsive-3 formulario">
+                <h3>CATEGORY</h3>
+                    <label for="categorias">
+                        <input type="checkbox" name="categoria" class="categorias checkbox1" value="cats"> CATS
+                    </label>
+                    <label for="categorias">
+                        <input type="checkbox" name="categoria" class="categorias checkbox1" value="dogs"> DOGS
+                    </label>
+                    <label for="categorias">
+                        <input type="checkbox" name="categoria" class="categorias checkbox1" value="hamsters"> HAMSTERS
+                    </label>
+                    <label for="categorias">
+                        <input type="checkbox" name="categoria" class="categorias checkbox1" value="bunnies"> BUNNIES
+                    </label>
+            </div>
+            
+            <div class="contenedor-botones-aside-responsive-4 formulario">
+                <h3>RATING</h3>
+                    <label>
+                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i> (5)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> (4)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> (3)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> (2)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star">
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i> (1)
+                    </label>
+            </div>
+        </form>
+      </div>
+    </div>
 
   <script src="index.js"></script>  
 </body>

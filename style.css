@@ -10,6 +10,14 @@ body {
  
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .contenedor-header {
     background-color: #f5f5f5;
     display: flex;
@@ -446,9 +454,10 @@ button, input, label {
     border: none;
     padding: 13px;
     border-bottom: 2px solid black;
-    background-color: #f5f5f5;
     font-family: "Quicksand";
+    background-color: #f5f5f5;
 }
+
 
 .contenedor-busqueda {
     display: flex;
@@ -555,6 +564,9 @@ button {
     height: 250px;
     width: 250px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
 .product-img {
@@ -681,10 +693,102 @@ ul {
 
 
 
+
+
 /* Responsive */
 
 
 @media (max-width: 651px) {
+    
+    .boton-responsive-filtro {
+        display: flex;
+    }
+
+    .view-buttons {
+        display: none;
+    }
+
+    .boton-filtro {
+        display: flex;
+    }
+
+    .fa-filter {
+        margin: 0;
+        padding: 0;
+    }
+
+    .texto-filters-responsive {
+        font-family: "Quicksand";
+        font-size: 16px;
+        margin: 0;
+    }
+
+    #seccion-aside-mostrada {
+        display: none;
+    }
+
+    .contenedor-barra-principal-productos {
+        flex-grow: 1;
+        width: 100vw;
+
+    }
+
+    .producto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 100vw;
+        
+    }
+
+    .add-to-cart-btn {
+        width: 100%;
+        min-width: 300px;
+    }
+
+    .overlay-seccion-aside-responsive {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+    }
+    
+    .seccion-aside-responsive {
+        width: 100%;
+        height: 100%;
+        max-width: 270px;
+        padding: 40px 20px;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        color: black;
+        font-family: "Quicksand";
+        position: fixed;
+        transform: translate(100%);
+        z-index: 5000;
+        transition: 1s;
+        margin: 0;
+    }
+
+    .boton-busqueda {
+        background-color: #fff;
+    }
+
+    .contenedor-botones-aside-responsive-1 {
+        display: flex;
+        justify-content: space-between;
+        
+        margin: 5px;
+    }
+
+    .mostrar-seccion-aside-responsive {
+        transform: translate(0);
+    }
     
 }
 
