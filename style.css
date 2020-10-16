@@ -94,6 +94,7 @@ html {
     margin-right: 150px;
     font-family: "Quicksand";
     font-size: 15px;
+    width: 200px;
 }
 
 .carrito {
@@ -698,7 +699,7 @@ ul {
 /* Responsive */
 
 
-@media (max-width: 651px) {
+@media (max-width: 575.98px) {
 
     .seccion-aside {
         display: none;
@@ -760,7 +761,7 @@ ul {
         background-color: rgba(0, 0, 0, 0.5);
         position: fixed;
         top: 0;
-        z-index: 9999;
+        
     }
     
     .seccion-aside-responsive {
@@ -775,8 +776,8 @@ ul {
         font-family: "Quicksand";
         position: fixed;
         transform: translate(100%);
-        z-index: 5000;
-        transition: 1s;
+        z-index: 500;
+        transition: 0.5s;
         margin: 0;
     }
 

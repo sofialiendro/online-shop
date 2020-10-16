@@ -420,7 +420,6 @@ botonFiltro.onclick = () => {
   overlayFiltrosResponsive.classList.remove("no-mostrar")
   document.body.classList.add("no-scroll");
   seccionFiltrosResponsive.classList.add("mostrar-seccion-aside-responsive")
-  
 }
 
 botonCerrarAsideResponsive.onclick = () => {
