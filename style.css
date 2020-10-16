@@ -819,6 +819,10 @@ ul {
         max-width: 100%;
     }
 
+    .boton-gris-cuadro-vaciar, .boton-rojo-cuadro-vaciar {
+        width: 150px;
+    }
+
     .mostrar-seccion-aside-responsive {
         transform: translate(0);
     }
