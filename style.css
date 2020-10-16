@@ -806,17 +806,9 @@ ul {
     }
 
     .cuadro-comprar {
-        background-color: #fff;
-        padding: 40px;
-        position: absolute;
-        width: 100vw;
-        background: #fff;
-        z-index:1002;
-        overflow: auto;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        overflow: scroll;
+        left: 0;
+        right: 0;
+        max-width: 100%;
     }
 
     .mostrar-seccion-aside-responsive {
