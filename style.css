@@ -671,6 +671,10 @@ ul {
     margin: 0;
 }
 
+.boton-responsive-filtro {
+    display: none;
+}
+
 
 
 /* Clase para JS */
@@ -823,11 +827,22 @@ ul {
         width: 150px;
     }
 
+    #buscar-productos-responsive {
+        cursor: text;
+        border: none;
+        padding: 13px;
+        border-bottom: 2px solid black;
+        font-family: "Quicksand";
+        background-color: #fff;
+    }
+
     .mostrar-seccion-aside-responsive {
         transform: translate(0);
     }
 
-
+    .no-mostrar {
+        display: none;
+    }
     
 }
 
@@ -865,6 +880,8 @@ ul {
         top: 0;
         
     }
+
+    
 
     .seccion-aside-responsive {
         width: 100%;
@@ -925,7 +942,25 @@ ul {
         margin: 0;
     }
 
+    
+    #buscar-productos-responsive {
+        cursor: text;
+        border: none;
+        padding: 13px;
+        border-bottom: 2px solid black;
+        font-family: "Quicksand";
+        background-color: #fff;
+    }
+
     .mostrar-seccion-aside-responsive {
         transform: translate(0);
     }
+
+    .no-mostrar {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
 }

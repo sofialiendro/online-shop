@@ -67,7 +67,7 @@ const botonFiltro = document.querySelector(".boton-filtro")
 const overlayFiltrosResponsive = document.querySelector(".overlay-seccion-aside-responsive")
 const seccionFiltrosResponsive = document.querySelector(".seccion-aside-responsive")
 const botonCerrarAsideResponsive = document.querySelector("#boton-cerrar-aside-responsive")
-
+const busquedaProductosResponsive = document.querySelector("#buscar-productos-responsive")
 
 // Botones grilla y lista
 
@@ -427,3 +427,35 @@ botonCerrarAsideResponsive.onclick = () => {
   document.body.classList.remove("no-scroll");
   seccionFiltrosResponsive.classList.remove("mostrar-seccion-aside-responsive")
 }
+
+
+
+const buscarProductosResponsive = () => {
+
+
+  if (busquedaProductosResponsive.oninput) {
+    for (let tarjeta of tarjetas) {
+      const titulo = tarjeta.dataset.nombre;
+      const busqueda = busquedaProductosResponsive.value;
+
+      if (titulo.includes(busqueda)) {
+        tarjeta.classList.remove("no-mostrar");
+      } else {
+        tarjeta.classList.add("no-mostrar");
+      }
+    }
+  };
+}
+
+
+
+busquedaProductosResponsive.oninput = (e) => {
+  buscarProductosResponsive()
+}
+
+busquedaProductosResponsive.oninput = () => {
+  buscarProductosResponsive();
+  cantidadProductosMostrados();
+};
+
+
