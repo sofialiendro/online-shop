@@ -801,9 +801,19 @@ ul {
         margin: 10px;
     }
 
+    .cuadro-vaciar {
+        top: 10%;
+        left: 10%;
+        width: 50%;
+        position: absolute;
+
+    }
+
     .mostrar-seccion-aside-responsive {
         transform: translate(0);
     }
+
+
     
 }
 
