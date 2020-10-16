@@ -699,6 +699,11 @@ ul {
 
 
 @media (max-width: 651px) {
+
+    .seccion-aside {
+        display: none;
+    }
+
     
     .boton-responsive-filtro {
         display: flex;
