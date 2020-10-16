@@ -802,11 +802,7 @@ ul {
     }
 
     .cuadro-vaciar {
-        top: 10%;
-        left: 10%;
-        width: 50%;
-        position: absolute;
-
+        width: 60%;
     }
 
     .mostrar-seccion-aside-responsive {
