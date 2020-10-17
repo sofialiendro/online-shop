@@ -847,11 +847,16 @@ ul {
 }
 
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 577px) and (max-width: 767.98px) {
     .cuadro-comprar {
         left: 0;
         right: 0;
         max-width: 100%;
+    }
+
+    .contenedor-botones-aside-responsive-1 {
+        display: flex;
+        justify-content: space-between;
     }
 
     .cuadro-vaciar {
@@ -881,7 +886,21 @@ ul {
         
     }
 
-    
+    .contenedor-botones-aside-responsive-1 {
+        display: flex;
+        justify-content: space-between;
+        
+        margin: 5px;
+    }
+
+    .contenedor-icono-header {
+        margin: 10px;
+        
+    }
+
+    #abrir-carrito {
+        margin: 10px;
+    }
 
     .seccion-aside-responsive {
         width: 100%;
