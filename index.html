@@ -71,7 +71,7 @@
                   </div>
 
                 <div class="overlay-cuadro-comprar no-mostrar">
-                  <div class="cuadro-comprar">
+                  <div class="cuadro-comprar" id="cuadro-comprar-original">
                     <div class="contenedor-titulo-cuadro-comprar">
                       <h1 class="titulo-cuadro-comprar">Checkout</h1>
                     </div>
@@ -151,10 +151,10 @@
                     
 
                     <footer class="botones-footer-cuadro-comprar">
-                      <button type="button" id="boton-seguir-comprando" class="boton-gris-cuadro-vaciar">
+                      <button type="button" id="boton-seguir-comprando" class="boton-gris-cuadro-seguir">
                         KEEP SHOPPING
                       </button>
-                      <form>
+                      <form class="formulario-enviar">
                         <button type="submit" form="form-cuadro-comprar" value="Submit" class="boton-enviar-formulario">
                           SUBMIT
                         </button>
@@ -304,7 +304,7 @@
                     data-puntaje="3"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/1575022860_2_2292.jpg" class="product-img" alt="Comfortable Cat Bed"/>
+                        <img src="img/Products/1575022860_2_2292.jpg" alt class="product-img" />
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Comfy Bed</h3>
@@ -334,7 +334,7 @@
                     data-puntaje="5"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" class="product-img" alt="Cat Oak Scratcher"/>
+                        <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" alt class="product-img"/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Oak Scratcher</h3>
@@ -364,7 +364,7 @@
                     data-puntaje="2"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/s-l640.jpg" class="product-img" alt="Bunny Carrot Toy Tree"/>
+                        <img src="img/Products/s-l640.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Carrot Tree</h3>
@@ -424,7 +424,7 @@
                     data-puntaje="5"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/default.jpg" class="product-img" alt="Dog Bed with Removable Cover"/>
+                        <img src="img/Products/default.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Bed with Removable Cover</h3>
@@ -454,7 +454,7 @@
                     data-puntaje="1"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/319vlKvCVcL._AC_SY400_.jpg" class="product-img" alt="Hamster Toy Bridge"/>
+                        <img src="img/Products/319vlKvCVcL._AC_SY400_.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Toy Bridge</h3>
@@ -484,7 +484,7 @@
                     data-puntaje="3"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/6164Uje7byL._AC_SX522_.jpg" class="product-img" alt="Bunny Grass House"/>
+                        <img src="img/Products/6164Uje7byL._AC_SX522_.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Grass House</h3>
@@ -514,7 +514,7 @@
                     data-puntaje="2"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/AP4SS200603e3mqp.jpg" class="product-img" alt="Cat Food Toy"/>
+                        <img src="img/Products/AP4SS200603e3mqp.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Food Maze</h3>
@@ -544,7 +544,7 @@
                     data-puntaje="4"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/Professional-Dog-Comb-Brush-Tool-Comb-Round-Dog-Grooming-Trimmer-Antistatic-Flea-Pet-Cat-Steel-Chinese.jpg" class="product-img" alt="Dog Brushes Set of Two"/>
+                        <img src="img/Products/Professional-Dog-Comb-Brush-Tool-Comb-Round-Dog-Grooming-Trimmer-Antistatic-Flea-Pet-Cat-Steel-Chinese.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Professional Brushes Set</h3>
@@ -574,7 +574,7 @@
                     data-puntaje="3"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/41igobiNOfL._AC_.jpg" class="product-img" alt="Hamster Soft Bed"/>
+                        <img src="img/Products/41igobiNOfL._AC_.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Soft Bed</h3>
@@ -604,7 +604,7 @@
                     data-puntaje="4"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/817QoAR+WbL._AC_SL1500_.jpg" class="product-img" alt="Bunny Rope Toy"/>
+                        <img src="img/Products/817QoAR+WbL._AC_SL1500_.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Rope Toys Set</h3>
@@ -634,7 +634,7 @@
                     data-puntaje="5"
                     >
                       <div class="product-img-container">
-                        <img src="img/Products/Automatic-Rabbit-Hamster-Feeder-Water-Bottles-Dispenser-Food-Dish-Bowl-for-Guinea-Pigs-Hamster-Mice-Small.jpg" class="product-img" alt="Hamster Automatic Feeder"/>
+                        <img src="img/Products/Automatic-Rabbit-Hamster-Feeder-Water-Bottles-Dispenser-Food-Dish-Bowl-for-Guinea-Pigs-Hamster-Mice-Small.jpg" class="product-img" alt/>
                       </div>
                       <div class="product-body">
                         <h3 class="product-name">Automatic Feeder</h3>
@@ -763,6 +763,9 @@
             </div>
         </form>
       </div>
+
+      
+      
     
 
   <script src="index.js"></script>  

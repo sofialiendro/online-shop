@@ -68,6 +68,8 @@ const overlayFiltrosResponsive = document.querySelector(".overlay-seccion-aside-
 const seccionFiltrosResponsive = document.querySelector(".seccion-aside-responsive")
 const botonCerrarAsideResponsive = document.querySelector("#boton-cerrar-aside-responsive")
 const busquedaProductosResponsive = document.querySelector("#buscar-productos-responsive")
+const cuadroComprarResponsive = document.querySelector("#reponsive-cuadro-comprar")
+
 
 // Botones grilla y lista
 
@@ -162,8 +164,6 @@ botonSeguirComprando.onclick = () => {
 
 // Sección para pagar
 
-// ver cómo hacer andar esto de abajo
-
 const obtenerDescuento = (subtotal) => {
     return (subtotal * 0.05)
 }
@@ -175,61 +175,6 @@ const obtenerRecargo = (subtotal) => {
 }
 
 mostrarRecargo.textContent = "$" + obtenerRecargo(subtotal);
-
-
-// const obtenerGastosDeEnvio = (subtotal) => {
-//     return subtotal + delivery
-// }
-
-// const obtenerCalculoDescuento = (precio) => {
-//     let descuento = obtenerDescuento(precio) - precio
-//     return descuento
-// }
-
-let tieneDescuento = true
-let tieneRecargo = true
-let tieneGastosDeEnvio = false
-
-// const obtenerTotal = () => {
-//     // let descuento = 0
-//     // let recargo = 0
-//     // let gastoDeEnvio = 0
-//     if (botonDescuento.onclick) {
-//         console.log(mostrarTotal.textContent = "$" + obtenerDescuento(subtotal) + subtotal)
-//     }
-    
-//     // if (tieneRecargo) {
-//     //     precioRecargo = obtenerRecargo(subtotal) - subtotal
-//     // }
-//     // if (tieneGastosDeEnvio) {
-//     //     precioDelivery = delivery - subtotal
-//     // }
-//     // return subtotal + recargo + descuento + delivery
-// }
-
-
-
-// botonCredito.onclick = () => {
-//     recargoCredito.classList.remove("no-mostrar")
-//     mostrarTotal.textContent = "$" + (subtotal + obtenerRecargo(subtotal))
-// }
-
-// botonDebito.onclick = () => {
-//     recargoCredito.classList.add("no-mostrar")
-//     mostrarTotal.textContent = "$" + (subtotal)
-// }
-
-// botonDelivery.onclick = () => {
-//     recargoDelivery.classList.toggle("no-mostrar")
-//     mostrarTotal.textContent = "$" + (subtotal + delivery)
-// }
-
-// botonDescuento.onclick = () => {
-//     descuentoGiftCard.classList.toggle("no-mostrar")
-//     mostrarTotal.textContent = "$" + (subtotal - obtenerDescuento(subtotal))
-// }
-
-
 
 let subtotalEnNumero = Number(subtotal);
 
@@ -357,7 +302,10 @@ const coincidenCheckboxYTarjeta = (tarjeta) => {
   }
 };
 
+
+
 const filtrarTarjetas = () => {
+
   for (let tarjeta of tarjetas) {
     tarjeta.classList.add("no-mostrar");
     if (checkboxSeleccionado()) {
@@ -428,7 +376,9 @@ botonCerrarAsideResponsive.onclick = () => {
   seccionFiltrosResponsive.classList.remove("mostrar-seccion-aside-responsive")
 }
 
-
+busquedaProductosResponsive.oninput = (e) => {
+  buscarProductosResponsive()
+}
 
 const buscarProductosResponsive = () => {
 
@@ -448,14 +398,10 @@ const buscarProductosResponsive = () => {
 }
 
 
-
-busquedaProductosResponsive.oninput = (e) => {
-  buscarProductosResponsive()
-}
-
 busquedaProductosResponsive.oninput = () => {
   buscarProductosResponsive();
   cantidadProductosMostrados();
 };
+
 
 
