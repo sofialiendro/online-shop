@@ -721,6 +721,9 @@ ul {
 
 @media (max-width: 576px) {
     
+    .no-scroll {
+        overflow: scroll;
+    }
 
     .seccion-aside {
         display: none;
