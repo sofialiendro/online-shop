@@ -319,6 +319,7 @@ botonLimpiar.onclick = () => {
   tarjeta.classList.remove("no-mostrar");
 };
 
+
 // Cantidad de productos mostrados
 
 const cantidadMostrada = document.querySelector(".cantidad-mostrada");
