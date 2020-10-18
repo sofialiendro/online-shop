@@ -913,6 +913,10 @@ ul {
         display: flex;
         justify-content: flex-end;
     }
+
+    .no-mostrar-producto {
+        display: none;
+    }
     
 }
 
@@ -1108,6 +1112,10 @@ ul {
     }
 
     .no-mostrar {
+        display: none;
+    }
+
+    .no-mostrar-producto {
         display: none;
     }
 }
