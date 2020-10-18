@@ -252,7 +252,7 @@ const buscarProductos = () => {
   if (busquedaProductos.oninput) {
     for (let tarjeta of tarjetas) {
       const titulo = tarjeta.dataset.nombre;
-      const busqueda = busquedaProductos.value;
+      const busqueda = busquedaProductos.value.toLowerCase()
 
       if (titulo.includes(busqueda)) {
         tarjeta.classList.remove("no-mostrar");
@@ -386,7 +386,7 @@ const buscarProductosResponsive = () => {
   if (busquedaProductosResponsive.oninput) {
     for (let tarjeta of tarjetas) {
       const titulo = tarjeta.dataset.nombre;
-      const busqueda = busquedaProductosResponsive.value;
+      const busqueda = busquedaProductosResponsive.value.toLowerCase()
 
       if (titulo.includes(busqueda)) {
         tarjeta.classList.remove("no-mostrar");

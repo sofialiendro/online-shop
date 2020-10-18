@@ -904,12 +904,21 @@ ul {
     .no-mostrar {
         display: none;
     }
+
+    .contenedor-boton-cerrar-aside-responsive {
+        display: flex;
+        justify-content: flex-end;
+    }
     
 }
 
 
 @media (min-width: 577px) and (max-width: 767.98px) {
 
+    .contenedor-boton-cerrar-aside-responsive {
+        display: flex;
+        justify-content: flex-end;
+    }
 
 
     .cuadro-comprar {
