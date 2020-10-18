@@ -703,6 +703,9 @@ ul {
     display: none;
 }
 
+.no-mostrar-producto {
+    display: none;
+}
 
 .no-scroll {
     overflow: hidden;
