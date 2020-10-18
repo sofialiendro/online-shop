@@ -1013,6 +1013,10 @@ ul {
         align-items: center;
     }
 
+    .carrito {
+        overflow: scroll;
+    }
+    
     .overlay-seccion-aside-responsive {
         width: 100vw;
         height: 100vh;
