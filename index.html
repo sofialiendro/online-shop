@@ -1,775 +1,786 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
-    <title>SOFÍA'S</title>
-</head>
-<body>
-    <header>
-        <section class="contenedor-header">
-            <div class="contenedor-icono-header">
-                <h1><i class="fa fa-paw" id="icono-header" aria-label="Pink paw"></i> SOFÍA'S</h1>
-            </div>
-
-            
-                <button id="abrir-carrito"><i class="fas fa-shopping-cart" aria-label="shopping cart"></i>  Cart (2 items)</button>
-                <div class="overlay no-mostrar" id="overlay"></div>
-                
-                  <div class="carrito">
-                    <div class="carrito-cruz">
-                      <h2 class="titulo-carrito">Shopping Cart</h2>
-                      <button id="cerrar-carrito" class="fas fa-times" aria-label="cross"></button>
-                    </div>
-                    <p>2 product(s) added</p>
-                    <div class="productos-carrito-1-y-2">
-                      <section class="producto-carrito linea-divisoria">
-                        
-                        <div class="contenedor-imagen-producto-carrito">
-                          <img src="img/Products/1575022860_2_2292.jpg" alt="Comfortable Cat Bed" class="imagen-producto-carrito"/>
-                        </div>
-                        <div class="info-productos-carrito">
-                          <div class="info-producto-carrito carrito-cruz">
-                            <h3 class="titulo-carrito">Comfy Bed</h3><button class="far fa-trash-alt tacho-carrito" aria-label="trash bin"></button> 
-                          </div>
-                          <div class="info-producto-carrito-2 carrito-cruz">
-                            <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>items</p><p>$22</p>
-                          </div>
-                        </div>  
-                      </section>
-
-                      <section class="producto-carrito producto-carrito-2">
-                        
-                        <div class="contenedor-imagen-producto-carrito">
-                          <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" alt="Cat Oak Scratcher" class="imagen-producto-carrito"/>
-                        </div>
-                        <div class="info-productos-carrito">
-                          <div class="info-producto-carrito carrito-cruz">
-                            <h3 class="titulo-carrito">Oak Scratcher</h3><button class="far fa-trash-alt tacho-carrito" aria-label="trash bin"></button> 
-                          </div>
-                          <div class="info-producto-carrito-2 carrito-cruz">
-                            <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>items</p><p>$50</p>
-                          </div>
-                        </div>  
-                      </section>
-                    </div>
-
-                    <div class="subtotal">
-                      <p>Subtotal $72</p>
-                    </div>
-                    
-                    <button type="button" class="button" id="boton-comprar">BUY</button>
+<html lang="en"> 
+  <!-- La idea es hacer la página en inglés -->
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+      <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+      <title>SOFÍA'S</title>
+  </head>
+  <body>
+    <!-- Comienzo header -->
+      <header>
+          <section class="contenedor-header">
+              <div class="contenedor-icono-header">
+                  <h1><i class="fa fa-paw" id="icono-header" aria-label="Pink paw"></i> SOFÍA'S</h1>
+              </div>
+              <!-- Comienzo carrito -->
+              
+                  <button id="abrir-carrito"><i class="fas fa-shopping-cart" aria-label="shopping cart"></i>  Cart (2 items)</button>
+                  <div class="overlay no-mostrar" id="overlay"></div>
                   
-                      
-                    <button type="button" class="button" id="boton-vaciar">CLEAR</button>
-                    
-
-                  </div>
-
-                <div class="overlay-cuadro-comprar no-mostrar">
-                  <div class="cuadro-comprar" id="cuadro-comprar-original">
-                    <div class="contenedor-titulo-cuadro-comprar">
-                      <h1 class="titulo-cuadro-comprar">Checkout</h1>
-                    </div>
-                      <div class="resumen-y-contenedor-datos-personales-y-pago">
-                        <div class="contenedor-datos-personales-y-pago">
-                          <div class="contenedor-datos-personales">
-                            <div class="contenedor-titulo-datos-personales">
-                              <h3 class="titulo-datos-personales">Personal Details</h2>
-                            </div>
-                            <div class="contenedor-ingresar-datos-personales linea-divisoria-cuadro-comprar">
-                                <p class="ingresar-datos-personales-1">Name and Lastname *</p>
-                              <form class="input-ingresar-datos-personales-1" id="form-cuadro-comprar" name="formulario-email-nombre">
-                                <input type="text" placeholder="e.g. Sofía Liendro" name="name-lastname" id="ingresar-nombre-completo" required>
-                              
-                                <p class="ingresar-datos-personales-2">Email *</p>
-                              
-                                <input type="email" placeholder="e.g. sofialiendro.s@gmail.com" id="ingresar-email" name="email" required>
-                              </form>
-                            </div>
-                          </div>
-
-                          <div class="contenedor-opciones-pago">
-                            <div class="contenedor-titulo-opciones-pago">
-                              <h3 class="titulo-opciones-pago">Payment Options</h2>
-                            </div>
-                            <form class="contenedor-botones-opciones-pago">
-                              <label>
-                                <input class="metodos-de-pago" type="radio" name="pago" checked value="debito" id="boton-debito"> Debit card
-                              </label>
-                              <label>
-                                <input class="metodos-de-pago" type="radio" name="pago" value="credito" id="boton-credito"> Credit card
-                              </label>
-                              <label>
-                                <input class="metodos-de-pago" type="checkbox" name="envio" value="delivery" id="boton-delivery"> Add delivery
-                              </label>
-                              <label>
-                                <input class="metodos-de-pago" type="checkbox" name="tarjeta-regalo" value="giftcard" id="boton-giftcard"> Add gift card
-                              </label>
-                            </form>
-                          </div>
-
+                    <div class="carrito">
+                      <div class="carrito-cruz">
+                        <h2 class="titulo-carrito">Shopping Cart</h2>
+                        <button id="cerrar-carrito" class="fas fa-times" aria-label="cross"></button>
+                      </div>
+                      <p>2 product(s) added</p>
+                      <div class="productos-carrito-1-y-2">
+                        <section class="producto-carrito linea-divisoria">
                           
-                        </div>
-
-                        <section class="resumen">
-                          <div>
-                            <h3 class="titulo-opciones-pago">Overview</h2>
+                          <div class="contenedor-imagen-producto-carrito">
+                            <img src="img/Products/1575022860_2_2292.jpg" alt="Comfortable Cat Bed" class="imagen-producto-carrito"/>
                           </div>
-                          <br>
+                          <div class="info-productos-carrito">
+                            <div class="info-producto-carrito carrito-cruz">
+                              <h3 class="titulo-carrito">Comfy Bed</h3><button class="far fa-trash-alt tacho-carrito" aria-label="trash bin"></button> 
+                            </div>
+                            <div class="info-producto-carrito-2 carrito-cruz">
+                              <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>items</p><p>$22</p>
+                            </div>
+                          </div>  
+                        </section>
 
-                          <div class="contenedor-recargos-subtotales">
-                            <div class="contenedor-subtotal">
-                              <p class="subtotal-opciones-pago">Subtotal</p>
-                              <p class="subtotal-precio-opciones-pago">0</p>
-                            </div>
-                            <div class="contenedor-giftcard no-mostrar recargo">
-                              <p class="giftcard-opciones-pago">5% OFF</p>
-                              <p class="giftcard-precio-opciones-pago">0</p>
-                            </div>
-                            <div class="contenedor-delivery no-mostrar recargo">
-                              <p class="delivery-opciones-pago">Delivery</p>
-                              <p class="delivery-precio-opciones-pago">0</p>
-                            </div>
-                            <div class="contenedor-recargo no-mostrar recargo">
-                              <p class="recargo-opciones-pago">Card Fee</p>
-                              <p class="recargo-precio-opciones-pago">0</p>
-                            </div>
+                        <section class="producto-carrito producto-carrito-2">
+                          
+                          <div class="contenedor-imagen-producto-carrito">
+                            <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" alt="Cat Oak Scratcher" class="imagen-producto-carrito"/>
                           </div>
-
-                          <div class="contenedor-total">
-                            <p class="total-opciones-pago">TOTAL</p>
-                            <p class="total-precio-opciones-pago">0</p>
-                          </div>    
+                          <div class="info-productos-carrito">
+                            <div class="info-producto-carrito carrito-cruz">
+                              <h3 class="titulo-carrito">Oak Scratcher</h3><button class="far fa-trash-alt tacho-carrito" aria-label="trash bin"></button> 
+                            </div>
+                            <div class="info-producto-carrito-2 carrito-cruz">
+                              <input type="number" min="0" value="1" class="cantidad-producto-carrito" tabindex="0"><p>items</p><p>$50</p>
+                            </div>
+                          </div>  
                         </section>
                       </div>
 
+                      <div class="subtotal">
+                        <p>Subtotal $72</p>
+                      </div>
+                      
+                      <button type="button" class="button" id="boton-comprar">BUY</button>
                     
-
-                    <footer class="botones-footer-cuadro-comprar">
-                      <button type="button" id="boton-seguir-comprando" class="boton-gris-cuadro-seguir">
-                        KEEP SHOPPING
-                      </button>
-                      <form class="formulario-enviar">
-                        <button type="submit" form="form-cuadro-comprar" value="Submit" class="boton-enviar-formulario">
-                          SUBMIT
-                        </button>
-                      </form>
-                    </footer>
-
-
-
-
-
-
-                  </div>
-                </div>
-                
-                <div class="overlay-cuadro-vaciar no-mostrar">
-                  
-                  <div class="cuadro-vaciar">
-                    <div class="contenedor-titulo-cuadro-vaciar">
-                      <h2 class="titulo-cuadro-vaciar">You're about to clear items. Do you want to continue?</h2>
-                    </div>
-                    <div class="contenedor-botones-cuadro-vaciar">
-                      <button type="button" class="boton-gris-cuadro-vaciar" id="boton-cancelar">CANCEL</button>
-                      <button type="button" class="boton-rojo-cuadro-vaciar">CLEAR</button>
-                    </div>
-                  </div>
-                </div>  
-
-        </section>
-    </header>
-
-    <section class="contenedor-imagen-principal" alt="Images of dogs, bunnies, cat and hamster in pink background">
-      <h1 class="texto-imagen-principal">Accesories</h1>
-    </section>
-
-    <section class="contenedor-seccion-principal">
-        <div class="seccion-principal">
-            <aside class="seccion-aside" id="seccion-aside-mostrada">
-                <form class="formulario-principal" name="form-princ">
-                    <div class="contenedor-botones-aside-1">
-                        <h3 class="filtros">FILTERS</h3>
-                        <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin"></i> CLEAR</button>
-                    </div>
                         
-                    <div class="contenedor-botones-aside-2">
-                        <h3 class="buscar">SEARCH</h3>
-                        <div class="contenedor-busqueda" class="boton-buscar">
-                            <input type="text" placeholder="Search products" id="buscar-productos">
-                            <i class="fas fa-search" aria-label="Magnifier icon"></i>
-                        </div>
+                      <button type="button" class="button" id="boton-vaciar">CLEAR</button>
+                      
+
                     </div>
+                    <!-- Fin carrito -->
+                    <!-- Comienzo checkout -->
+                  <div class="overlay-cuadro-comprar no-mostrar">
+                    <div class="cuadro-comprar" id="cuadro-comprar-original">
+                      <div class="contenedor-titulo-cuadro-comprar">
+                        <h1 class="titulo-cuadro-comprar">Checkout</h1>
+                      </div>
+                        <div class="resumen-y-contenedor-datos-personales-y-pago">
+                          <div class="contenedor-datos-personales-y-pago">
+                            <div class="contenedor-datos-personales">
+                              <div class="contenedor-titulo-datos-personales">
+                                <h3 class="titulo-datos-personales">Personal Details</h2>
+                              </div>
+                              <div class="contenedor-ingresar-datos-personales linea-divisoria-cuadro-comprar">
+                                  <p class="ingresar-datos-personales-1">Name and Lastname *</p>
+                                <form class="input-ingresar-datos-personales-1" id="form-cuadro-comprar" name="formulario-email-nombre">
+                                  <input type="text" placeholder="e.g. Sofía Liendro" name="name-lastname" id="ingresar-nombre-completo" required>
+                                
+                                  <p class="ingresar-datos-personales-2">Email *</p>
+                                
+                                  <input type="email" placeholder="e.g. sofialiendro.s@gmail.com" id="ingresar-email" name="email" required>
+                                </form>
+                              </div>
+                            </div>
+
+                            <div class="contenedor-opciones-pago">
+                              <div class="contenedor-titulo-opciones-pago">
+                                <h3 class="titulo-opciones-pago">Payment Options</h2>
+                              </div>
+                              <form class="contenedor-botones-opciones-pago">
+                                <label>
+                                  <input class="metodos-de-pago" type="radio" name="pago" checked value="debito" id="boton-debito"> Debit card
+                                </label>
+                                <label>
+                                  <input class="metodos-de-pago" type="radio" name="pago" value="credito" id="boton-credito"> Credit card
+                                </label>
+                                <label>
+                                  <input class="metodos-de-pago" type="checkbox" name="envio" value="delivery" id="boton-delivery"> Add delivery
+                                </label>
+                                <label>
+                                  <input class="metodos-de-pago" type="checkbox" name="tarjeta-regalo" value="giftcard" id="boton-giftcard"> Add gift card
+                                </label>
+                              </form>
+                            </div>
+
+                            
+                          </div>
+
+                          <section class="resumen">
+                            <div>
+                              <h3 class="titulo-opciones-pago">Overview</h2>
+                            </div>
+                            <br>
+
+                            <div class="contenedor-recargos-subtotales">
+                              <div class="contenedor-subtotal">
+                                <p class="subtotal-opciones-pago">Subtotal</p>
+                                <p class="subtotal-precio-opciones-pago">0</p>
+                              </div>
+                              <div class="contenedor-giftcard no-mostrar recargo">
+                                <p class="giftcard-opciones-pago">5% OFF</p>
+                                <p class="giftcard-precio-opciones-pago">0</p>
+                              </div>
+                              <div class="contenedor-delivery no-mostrar recargo">
+                                <p class="delivery-opciones-pago">Delivery</p>
+                                <p class="delivery-precio-opciones-pago">0</p>
+                              </div>
+                              <div class="contenedor-recargo no-mostrar recargo">
+                                <p class="recargo-opciones-pago">Card Fee</p>
+                                <p class="recargo-precio-opciones-pago">0</p>
+                              </div>
+                            </div>
+
+                            <div class="contenedor-total">
+                              <p class="total-opciones-pago">TOTAL</p>
+                              <p class="total-precio-opciones-pago">0</p>
+                            </div>    
+                          </section>
+                        </div>
+
+                      
+
+                      <footer class="botones-footer-cuadro-comprar">
+                        <button type="button" id="boton-seguir-comprando" class="boton-gris-cuadro-seguir">
+                          KEEP SHOPPING
+                        </button>
+                        <form class="formulario-enviar">
+                          <button type="submit" form="form-cuadro-comprar" value="Submit" class="boton-enviar-formulario">
+                            SUBMIT
+                          </button>
+                        </form>
+                      </footer>
+                      <!-- Fin checkout -->
+
+
+
+
+
+                    </div>
+                  </div>
+                  
+                  <div class="overlay-cuadro-vaciar no-mostrar">
                     
-                    <div class="contenedor-botones-aside-3 formulario">
-                        <h3>CATEGORY</h3>
-                            <label for="categorias">
-                                <input type="checkbox" name="categoria" class="categorias checkbox1" value="cats"> CATS
-                            </label>
-                            <label for="categorias">
-                                <input type="checkbox" name="categoria" class="categorias checkbox1" value="dogs"> DOGS
-                            </label>
-                            <label for="categorias">
-                                <input type="checkbox" name="categoria" class="categorias checkbox1" value="hamsters"> HAMSTERS
-                            </label>
-                            <label for="categorias">
-                                <input type="checkbox" name="categoria" class="categorias checkbox1" value="bunnies"> BUNNIES
-                            </label>
+                    <div class="cuadro-vaciar">
+                      <div class="contenedor-titulo-cuadro-vaciar">
+                        <h2 class="titulo-cuadro-vaciar">You're about to clear items. Do you want to continue?</h2>
+                      </div>
+                      <div class="contenedor-botones-cuadro-vaciar">
+                        <button type="button" class="boton-gris-cuadro-vaciar" id="boton-cancelar">CANCEL</button>
+                        <button type="button" class="boton-rojo-cuadro-vaciar">CLEAR</button>
+                      </div>
                     </div>
+                  </div>  
+              <!-- Fin carrito -->
+
+          </section>
+      </header>
+      <!-- Fin header -->
+      <!-- Comienzo Seccion principal -->
+
+      <section class="contenedor-imagen-principal" alt="Images of dogs, bunnies, cat and hamster in pink background">
+        <h1 class="texto-imagen-principal">Accesories</h1>
+      </section>
+
+      <section class="contenedor-seccion-principal">
+            <div class="seccion-principal">
+              <!-- Comienzo aside -->
+              <aside class="seccion-aside" id="seccion-aside-mostrada">
+                  <form class="formulario-principal" name="form-princ">
                     
-                    <div class="contenedor-botones-aside-4 formulario">
-                        <h3>RATING</h3>
-                            <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i> (5)
-                            </label>
-                            <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i> (4)
-                            </label>
-                            <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i> (3)
-                            </label>
-                            <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i> (2)
-                            </label>
-                            <label>
-                                <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star">
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i> (1)
-                            </label>
-                    </div>
-                </form>
-            </aside>
-
-            
-            <div class="seccion-productos">
-              <div class="contenedor-barra-principal-productos">
-                   
-                <p class="cantidad-de-productos">
-                  Showing <span class="cantidad-mostrada">12</span> product(s) of 12
-                  
-                <div class="view-buttons">
-                  View as
-                  <button type="button" class="view-btn show-grid-btn">
-                    <i class="fas fa-th" aria-label="Grid icon"></i>
-                  </button>
-                  <button type="button" class="view-btn show-list-btn">
-                    <i class="fas fa-list" aria-label="List icon"></i>
-                  </button>
-                </div>
-
-                <div class="boton-responsive-filtro">
-                  
-                  <button type="button" class="view-btn boton-filtro">
-                    <i class="fas fa-filter" aria-label="Filter icon"></i><p class="texto-filters-responsive">Filters</p>
-                  </button>
-                  
-                </div>
-
-              </div>
-
-                <section class="contenedor-seccion-productos">
-                  <div>
-                    <article class="producto"
-                    data-nombre="comfy bed"
-                    data-categoria="cats"
-                    data-precio="22"
-                    data-puntaje="3"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/1575022860_2_2292.jpg" alt="comfortable bed" class="product-img" />
+                      <div class="contenedor-botones-aside-1">
+                          <h3 class="filtros">FILTERS</h3>
+                          <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin"></i> CLEAR</button>
                       </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Comfy Bed</h3>
-                        <p class="product-price">$22</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Three stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                        <div class="product-actions">
-                          <button type="button" class="button button-default add-to-cart-btn">
-                            ADD TO CART
-                          </button>
-                        </div>
-                        </div>
+                          
+                      <div class="contenedor-botones-aside-2">
+                          <h3 class="buscar">SEARCH</h3>
+                          <div class="contenedor-busqueda" class="boton-buscar">
+                              <input type="text" placeholder="Search products" id="buscar-productos">
+                              <i class="fas fa-search" aria-label="Magnifier icon"></i>
+                          </div>
                       </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="oak scratcher"
-                    data-categoria="cats"
-                    data-precio="50"
-                    data-puntaje="5"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" alt="wood scratcher" class="product-img"/>
+                      
+                      <div class="contenedor-botones-aside-3 formulario">
+                          <h3>CATEGORY</h3>
+                              <label for="categorias">
+                                  <input type="checkbox" name="categoria" class="categorias checkbox1" value="cats"> CATS
+                              </label>
+                              <label for="categorias">
+                                  <input type="checkbox" name="categoria" class="categorias checkbox1" value="dogs"> DOGS
+                              </label>
+                              <label for="categorias">
+                                  <input type="checkbox" name="categoria" class="categorias checkbox1" value="hamsters"> HAMSTERS
+                              </label>
+                              <label for="categorias">
+                                  <input type="checkbox" name="categoria" class="categorias checkbox1" value="bunnies"> BUNNIES
+                              </label>
                       </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Oak Scratcher</h3>
-                        <p class="product-price">$50</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Five stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                        </div>
-                        <div class="product-actions">
-                          <button type="button" class="button button-default add-to-cart-btn">
-                            ADD TO CART
-                          </button>
-                        </div>
+                      
+                      <div class="contenedor-botones-aside-4 formulario">
+                          <h3>RATING</h3>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i> (5)
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i> (4)
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i> (3)
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i> (2)
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star">
+                                  <i class="fas fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i> (1)
+                              </label>
                       </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="carrot tree"
-                    data-categoria="bunnies"
-                    data-precio="26.39"
-                    data-puntaje="2"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/s-l640.jpg" class="product-img" alt="toy tree"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Carrot Tree</h3>
-                        <p class="product-price">$26.39</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Two stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                        </div>
-                        <div class="product-actions">
-                          <button type="button" class="button button-default add-to-cart-btn">
-                            ADD TO CART
-                          </button>
-                        </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="interactive feeder"
-                    data-categoria="dogs"
-                    data-precio="20.99"
-                    data-puntaje="3"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/Interactive-Dog-Toys-Pet-IQ-Treat-Food-Toy-Dog-Training-Toys-Puzzle-Educational-Anti-Choke-Feeder.jpg" class="product-img" alt="Dog Interactive Feeder"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Interactive Feeder</h3>
-                        <p class="product-price">$20.99</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Three stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                        </div>
-                        <div class="product-actions">
-                          <button type="button" class="button button-default add-to-cart-btn">
-                            ADD TO CART
-                          </button>
-                        </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="bed with removable cover"
-                    data-categoria="dogs"
-                    data-precio="49.99"
-                    data-puntaje="5"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/default.jpg" class="product-img" alt="bed and cover"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Bed with Removable Cover</h3>
-                        <p class="product-price">$49.99</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Five stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                        </div>
-                      <div class="product-actions">
-                        <button type="button" class="button button-default add-to-cart-btn">
-                          ADD TO CART
-                        </button>
-                      </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="toy bridge"
-                    data-categoria="hamsters"
-                    data-precio="10.30"
-                    data-puntaje="1"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/319vlKvCVcL._AC_SY400_.jpg" class="product-img" alt="hamster bridge"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Toy Bridge</h3>
-                        <p class="product-price">$10.30</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="One star">
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                        </div>
-                      <div class="product-actions">
-                        <button type="button" class="button button-default add-to-cart-btn">
-                          ADD TO CART
-                        </button>
-                      </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="grass house"
-                    data-categoria="bunnies"
-                    data-precio="19.99"
-                    data-puntaje="3"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/6164Uje7byL._AC_SX522_.jpg" class="product-img" alt="pet house"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Grass House</h3>
-                        <p class="product-price">$19.99</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Three stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                        </div>
-                      <div class="product-actions">
-                        <button type="button" class="button button-default add-to-cart-btn">
-                          ADD TO CART
-                        </button>
-                      </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="food maze"
-                    data-categoria="cats"
-                    data-precio="32.50"
-                    data-puntaje="2"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/AP4SS200603e3mqp.jpg" class="product-img" alt/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Food Maze</h3>
-                        <p class="product-price">$32.50</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Two stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                        </div>
-                      <div class="product-actions">
-                        <button type="button" class="button button-default add-to-cart-btn">
-                          ADD TO CART
-                        </button>
-                      </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="professional brushes set"
-                    data-categoria="dogs"
-                    data-precio="30.25"
-                    data-puntaje="4"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/Professional-Dog-Comb-Brush-Tool-Comb-Round-Dog-Grooming-Trimmer-Antistatic-Flea-Pet-Cat-Steel-Chinese.jpg" class="product-img" alt="pet brushes"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Professional Brushes Set</h3>
-                        <p class="product-price">$30.25</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Four stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                        </div>
-                      <div class="product-actions">
-                        <button type="button" class="button button-default add-to-cart-btn">
-                          ADD TO CART
-                        </button>
-                      </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="soft bed"
-                    data-categoria="hamsters"
-                    data-precio="15.99"
-                    data-puntaje="3"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/41igobiNOfL._AC_.jpg" class="product-img" alt="hamster bed"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Soft Bed</h3>
-                        <p class="product-price">$15.99</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Three stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                          <i class="far fa-star"></i>
-                        </div>
-                        <div class="product-actions">
-                          <button type="button" class="button button-default add-to-cart-btn">
-                            ADD TO CART
-                          </button>
-                        </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="rope toys set"
-                    data-categoria="bunnies"
-                    data-precio="12.30"
-                    data-puntaje="4"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/817QoAR+WbL._AC_SL1500_.jpg" class="product-img" alt="three rope balls"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Rope Toys Set</h3>
-                        <p class="product-price">$12.30</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Four stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="far fa-star"></i>
-                        </div>
-                        <div class="product-actions">
-                          <button type="button" class="button button-default add-to-cart-btn">
-                            ADD TO CART
-                          </button>
-                        </div>
-                      </div>
-                    </article>
-                </div>
-
-                <div>
-                    <article class="producto"
-                    data-nombre="automatic feeder"
-                    data-categoria="hamsters"
-                    data-precio="35.99"
-                    data-puntaje="5"
-                    >
-                      <div class="product-img-container">
-                        <img src="img/Products/Automatic-Rabbit-Hamster-Feeder-Water-Bottles-Dispenser-Food-Dish-Bowl-for-Guinea-Pigs-Hamster-Mice-Small.jpg" class="product-img" alt="hamster feeder"/>
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name">Automatic Feeder</h3>
-                        <p class="product-price">$35.99</p>
-                        <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
-                        <div class="rating" aria-label="Five stars">
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                        </div>
-                        <div class="product-actions">
-                          <button type="button" class="button button-default add-to-cart-btn">
-                            ADD TO CART
-                          </button>
-                        </div>
-                      </div>
-                    </article>
+                  </form>
+              </aside>
+                    <!-- Fin aside -->
+                <!-- Comienzo productos -->
+              
+              <div class="seccion-productos">
+                <div class="contenedor-barra-principal-productos">
+                    
+                  <p class="cantidad-de-productos">
+                    Showing <span class="cantidad-mostrada">12</span> product(s) of 12
+                    
+                  <div class="view-buttons">
+                    View as
+                    <button type="button" class="view-btn show-grid-btn">
+                      <i class="fas fa-th" aria-label="Grid icon"></i>
+                    </button>
+                    <button type="button" class="view-btn show-list-btn">
+                      <i class="fas fa-list" aria-label="List icon"></i>
+                    </button>
                   </div>
 
-              </section>
-          </div>
-      </div>
-  </section>
-    
+                  <div class="boton-responsive-filtro">
+                    
+                    <button type="button" class="view-btn boton-filtro">
+                      <i class="fas fa-filter" aria-label="Filter icon"></i><p class="texto-filters-responsive">Filters</p>
+                    </button>
+                    
+                  </div>
 
-    <footer>
-      <div class="contenedor-footer">
-        <p class="última-frase-footer"><i class="fa fa-paw" aria-hidden="true" aria-label="Pink paw"></i> SOFÍA'S - Thank you for your visit!</p>
-        <div class="contenedor-redes-footer">
-          <ul class="links-redes">
-            <li class="ícono-redes">
-              <a href="https://github.com/sofialiendro" target="_blank" class="footer-social-link github-link">
-                <i class="fab fa-github" aria-label="Github icon"></i></a>
-            </li>
-            <li class="ícono-redes">
-              <a href="https://www.linkedin.com/in/sofialiendro/" target="_blank" class="footer-social-link linkedin-link">
-                <i class="fab fa-linkedin" aria-label="LinkedIn icon"></i></a>
-            </li>
-            <li class="ícono-redes">
-              <a href="mailto:sofialiendro.s@gmail.com" target="_blank" class="footer-social-link email-link">
-                <i class="fas fa-envelope fab" aria-label="envelope"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>  
-    </footer>
+                </div>
 
-    <div class="overlay-seccion-aside-responsive no-mostrar"></div>
-      <div class="seccion-aside-responsive">
-        <form class="formulario-principal" name="form-princ">
-          <div class="contenedor-boton-cerrar-aside-responsive">
-           <button type="button" id="boton-cerrar-aside-responsive" class="fas fa-times" aria-label="cross"></button>
-          </div>
-            <div class="contenedor-botones-aside-responsive-1">
-                
-                <h3 class="filtros">FILTERS</h3>
-                <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin"></i> CLEAR</button>
-            </div>
-                
-            <div class="contenedor-botones-aside-responsive-2">
-                <h3 class="buscar">SEARCH</h3>
-                        <div class="contenedor-busqueda" class="boton-buscar">
-                            <input type="text" placeholder="Search products" id="buscar-productos-responsive">
-                            <i class="fas fa-search" aria-label="Magnifier icon"></i>
+                  <section class="contenedor-seccion-productos">
+                    <div>
+                      <article class="producto"
+                      data-nombre="comfy bed"
+                      data-categoria="cats"
+                      data-precio="22"
+                      data-puntaje="3"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/1575022860_2_2292.jpg" alt="comfortable bed" class="product-img" />
                         </div>
-            </div>
-            
-            <div class="contenedor-botones-aside-responsive-3 formulario">
-                <h3>CATEGORY</h3>
-                    <label for="categorias">
-                        <input type="checkbox" name="categoria" class="categorias checkbox1" value="cats"> CATS
-                    </label>
-                    <label for="categorias">
-                        <input type="checkbox" name="categoria" class="categorias checkbox1" value="dogs"> DOGS
-                    </label>
-                    <label for="categorias">
-                        <input type="checkbox" name="categoria" class="categorias checkbox1" value="hamsters"> HAMSTERS
-                    </label>
-                    <label for="categorias">
-                        <input type="checkbox" name="categoria" class="categorias checkbox1" value="bunnies"> BUNNIES
-                    </label>
-            </div>
-            
-            <div class="contenedor-botones-aside-responsive-4 formulario">
-                <h3>RATING</h3>
-                    <label>
-                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i> (5)
-                    </label>
-                    <label>
-                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i> (4)
-                    </label>
-                    <label>
-                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i> (3)
-                    </label>
-                    <label>
-                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i> (2)
-                    </label>
-                    <label>
-                        <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star">
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i> (1)
-                    </label>
-            </div>
-        </form>
-      </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Comfy Bed</h3>
+                          <p class="product-price">$22</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              ADD TO CART
+                            </button>
+                          </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
 
-      
-      
-    
+                    <div>
+                      <article class="producto"
+                      data-nombre="oak scratcher"
+                      data-categoria="cats"
+                      data-precio="50"
+                      data-puntaje="5"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/large-365520_LW_CUBOX_BASE_CAT_SCRATCH_OAK.jpg" alt="wood scratcher" class="product-img"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Oak Scratcher</h3>
+                          <p class="product-price">$50</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Five stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              ADD TO CART
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
 
-  <script src="index.js"></script>  
-</body>
+                    <div>
+                      <article class="producto"
+                      data-nombre="carrot tree"
+                      data-categoria="bunnies"
+                      data-precio="26.39"
+                      data-puntaje="2"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/s-l640.jpg" class="product-img" alt="toy tree"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Carrot Tree</h3>
+                          <p class="product-price">$26.39</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Two stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              ADD TO CART
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="interactive feeder"
+                      data-categoria="dogs"
+                      data-precio="20.99"
+                      data-puntaje="3"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/Interactive-Dog-Toys-Pet-IQ-Treat-Food-Toy-Dog-Training-Toys-Puzzle-Educational-Anti-Choke-Feeder.jpg" class="product-img" alt="Dog Interactive Feeder"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Interactive Feeder</h3>
+                          <p class="product-price">$20.99</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              ADD TO CART
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="bed with removable cover"
+                      data-categoria="dogs"
+                      data-precio="49.99"
+                      data-puntaje="5"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/default.jpg" class="product-img" alt="bed and cover"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Bed with Removable Cover</h3>
+                          <p class="product-price">$49.99</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Five stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            ADD TO CART
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="toy bridge"
+                      data-categoria="hamsters"
+                      data-precio="10.30"
+                      data-puntaje="1"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/319vlKvCVcL._AC_SY400_.jpg" class="product-img" alt="hamster bridge"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Toy Bridge</h3>
+                          <p class="product-price">$10.30</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="One star">
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            ADD TO CART
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="grass house"
+                      data-categoria="bunnies"
+                      data-precio="19.99"
+                      data-puntaje="3"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/6164Uje7byL._AC_SX522_.jpg" class="product-img" alt="pet house"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Grass House</h3>
+                          <p class="product-price">$19.99</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            ADD TO CART
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="food maze"
+                      data-categoria="cats"
+                      data-precio="32.50"
+                      data-puntaje="2"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/AP4SS200603e3mqp.jpg" class="product-img" alt/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Food Maze</h3>
+                          <p class="product-price">$32.50</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Two stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            ADD TO CART
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="professional brushes set"
+                      data-categoria="dogs"
+                      data-precio="30.25"
+                      data-puntaje="4"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/Professional-Dog-Comb-Brush-Tool-Comb-Round-Dog-Grooming-Trimmer-Antistatic-Flea-Pet-Cat-Steel-Chinese.jpg" class="product-img" alt="pet brushes"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Professional Brushes Set</h3>
+                          <p class="product-price">$30.25</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Four stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        <div class="product-actions">
+                          <button type="button" class="button button-default boton-agregar-carrito">
+                            ADD TO CART
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="soft bed"
+                      data-categoria="hamsters"
+                      data-precio="15.99"
+                      data-puntaje="3"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/41igobiNOfL._AC_.jpg" class="product-img" alt="hamster bed"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Soft Bed</h3>
+                          <p class="product-price">$15.99</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Three stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              ADD TO CART
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="rope toys set"
+                      data-categoria="bunnies"
+                      data-precio="12.30"
+                      data-puntaje="4"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/817QoAR+WbL._AC_SL1500_.jpg" class="product-img" alt="three rope balls"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Rope Toys Set</h3>
+                          <p class="product-price">$12.30</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Four stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              ADD TO CART
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div>
+                      <article class="producto"
+                      data-nombre="automatic feeder"
+                      data-categoria="hamsters"
+                      data-precio="35.99"
+                      data-puntaje="5"
+                      >
+                        <div class="product-img-container">
+                          <img src="img/Products/Automatic-Rabbit-Hamster-Feeder-Water-Bottles-Dispenser-Food-Dish-Bowl-for-Guinea-Pigs-Hamster-Mice-Small.jpg" class="product-img" alt="hamster feeder"/>
+                        </div>
+                        <div class="product-body">
+                          <h3 class="product-name">Automatic Feeder</h3>
+                          <p class="product-price">$35.99</p>
+                          <p class="descripcion-producto no-mostrar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis itaque esse tempora sed repellat enim officiis, consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus, quasi.</p>
+                          <div class="rating" aria-label="Five stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                          <div class="product-actions">
+                            <button type="button" class="button button-default boton-agregar-carrito">
+                              ADD TO CART
+                            </button>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                </section>
+              </div>
+              <!-- Fin productos -->
+            </div>
+      </section>
+      <!-- Fin seccion principal -->
+
+      <!-- Comienzo footer -->
+      <footer class="footer-tienda">
+        <div class="contenedor-footer">
+          <p class="última-frase-footer"><i class="fa fa-paw" aria-hidden="true" aria-label="Pink paw"></i> SOFÍA'S - Thank you for your visit!</p>
+          <div class="contenedor-redes-footer">
+            <ul class="links-redes">
+              <li class="ícono-redes">
+                <a href="https://github.com/sofialiendro" target="_blank" class="footer-social-link github-link">
+                  <i class="fab fa-github" aria-label="Github icon"></i></a>
+              </li>
+              <li class="ícono-redes">
+                <a href="https://www.linkedin.com/in/sofialiendro/" target="_blank" class="footer-social-link linkedin-link">
+                  <i class="fab fa-linkedin" aria-label="LinkedIn icon"></i></a>
+              </li>
+              <li class="ícono-redes">
+                <a href="mailto:sofialiendro.s@gmail.com" target="_blank" class="footer-social-link email-link">
+                  <i class="fas fa-envelope fab" aria-label="envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>  
+      </footer>
+      <!-- Fin footer -->
+
+      <!-- Comienzo aside responsive -->
+
+      <div class="overlay-seccion-aside-responsive no-mostrar"></div>
+        <div class="seccion-aside-responsive">
+          <form class="formulario-principal" name="form-princ">
+            <div class="contenedor-boton-cerrar-aside-responsive">
+            <button type="button" id="boton-cerrar-aside-responsive" class="fas fa-times" aria-label="cross"></button>
+            </div>
+              <div class="contenedor-botones-aside-responsive-1">
+                  
+                  <h3 class="filtros">FILTERS</h3>
+                  <button class="filters-clear-btn"><i class="fas fa-trash-alt" aria-label="trash bin"></i> CLEAR</button>
+              </div>
+                  
+              <div class="contenedor-botones-aside-responsive-2">
+                  <h3 class="buscar">SEARCH</h3>
+                          <div class="contenedor-busqueda" class="boton-buscar">
+                              <input type="text" placeholder="Search products" id="buscar-productos-responsive">
+                              <i class="fas fa-search" aria-label="Magnifier icon"></i>
+                          </div>
+              </div>
+              
+              <div class="contenedor-botones-aside-responsive-3 formulario">
+                  <h3>CATEGORY</h3>
+                      <label for="categorias">
+                          <input type="checkbox" name="categoria" class="categorias checkbox1" value="cats"> CATS
+                      </label>
+                      <label for="categorias">
+                          <input type="checkbox" name="categoria" class="categorias checkbox1" value="dogs"> DOGS
+                      </label>
+                      <label for="categorias">
+                          <input type="checkbox" name="categoria" class="categorias checkbox1" value="hamsters"> HAMSTERS
+                      </label>
+                      <label for="categorias">
+                          <input type="checkbox" name="categoria" class="categorias checkbox1" value="bunnies"> BUNNIES
+                      </label>
+              </div>
+              
+              <div class="contenedor-botones-aside-responsive-4 formulario">
+                  <h3>RATING</h3>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="5" aria-label="Five stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i> (5)
+                      </label>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="4" aria-label="Four stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i> (4)
+                      </label>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="3" aria-label="Three stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (3)
+                      </label>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="2" aria-label="Two stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (2)
+                      </label>
+                      <label>
+                          <input type="checkbox" name="puntaje" class="rating-checkbox checkbox1" value="1" aria-label="One star">
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i> (1)
+                      </label>
+              </div>
+          </form>
+        </div>
+        <!-- Fin aside responsive -->
+
+    <script src="index.js"></script>  
+  </body>
 </html>

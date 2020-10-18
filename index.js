@@ -1,4 +1,3 @@
-
 const busquedaProductos = document.querySelector("#buscar-productos");
 const tarjetas = document.getElementsByTagName("article");
 const filtroPuntaje = document.getElementsByClassName("rating-checkbox");
@@ -16,7 +15,7 @@ const contenedorProductos = document.querySelector(".contenedor-seccion-producto
 const tarjetasProducto = document.querySelectorAll(".producto");
 const botonGrilla = document.querySelector(".fa-th");
 const descripcionProducto = document.querySelectorAll(".descripcion-producto");
-const botonesListaAgregarCarrito = document.querySelectorAll(".add-to-cart-btn");
+const botonesListaAgregarCarrito = document.querySelectorAll(".boton-agregar-carrito");
 const contenedoresProductos = document.querySelectorAll(".product-body");
 
 const botonVaciar = document.querySelector("#boton-vaciar");
@@ -34,10 +33,10 @@ const botonDebito = document.querySelector("#boton-debito");
 const recargoCredito = document.querySelector(".contenedor-recargo");
 const botonCredito = document.querySelector("#boton-credito");
 const botonSeguirComprando = document.querySelector("#boton-seguir-comprando");
-const botonDelivery = document.querySelector("#boton-delivery")
-const botonDescuento = document.querySelector("#boton-giftcard")
-const recargoDelivery = document.querySelector(".contenedor-delivery")
-const descuentoGiftCard = document.querySelector(".contenedor-giftcard")
+const botonDelivery = document.querySelector("#boton-delivery");
+const botonDescuento = document.querySelector("#boton-giftcard");
+const recargoDelivery = document.querySelector(".contenedor-delivery");
+const descuentoGiftCard = document.querySelector(".contenedor-giftcard");
 
 const subtotal = 72;
 const mostrarSubtotal = document.querySelector(".subtotal-precio-opciones-pago");
@@ -55,21 +54,18 @@ mostrarDelivery.textContent = "$" + delivery;
 
 const mostrarRecargo = document.querySelector(".recargo-precio-opciones-pago");
 
-
-
-const form = document.querySelector(".boton-enviar-formulario")
-const inputNombre = document.querySelector("#ingresar-nombre-completo")
-const inputEmail = document.querySelector("#ingresar-email")
+const form = document.querySelector(".boton-enviar-formulario");
+const inputNombre = document.querySelector("#ingresar-nombre-completo");
+const inputEmail = document.querySelector("#ingresar-email");
 
 //Responsive
 
-const botonFiltro = document.querySelector(".boton-filtro")
-const overlayFiltrosResponsive = document.querySelector(".overlay-seccion-aside-responsive")
-const seccionFiltrosResponsive = document.querySelector(".seccion-aside-responsive")
-const botonCerrarAsideResponsive = document.querySelector("#boton-cerrar-aside-responsive")
-const busquedaProductosResponsive = document.querySelector("#buscar-productos-responsive")
-const cuadroComprarResponsive = document.querySelector("#reponsive-cuadro-comprar")
-
+const botonFiltro = document.querySelector(".boton-filtro");
+const overlayFiltrosResponsive = document.querySelector(".overlay-seccion-aside-responsive");
+const seccionFiltrosResponsive = document.querySelector(".seccion-aside-responsive");
+const botonCerrarAsideResponsive = document.querySelector("#boton-cerrar-aside-responsive");
+const busquedaProductosResponsive = document.querySelector("#buscar-productos-responsive");
+const cuadroComprarResponsive = document.querySelector("#reponsive-cuadro-comprar");
 
 // Botones grilla y lista
 
@@ -115,8 +111,6 @@ botonGrilla.onclick = () => {
 
 // Carrito
 
-
-
 botonMostrarCarrito.onclick = () => {
   overlay.classList.remove("no-mostrar");
   document.body.classList.add("no-scroll");
@@ -128,7 +122,6 @@ botonOcultarCarrito.onclick = () => {
   document.body.classList.remove("no-scroll");
   carrito.classList.remove("mostrar-carrito");
 };
-
 
 // Cuadro comprar
 
@@ -165,25 +158,24 @@ botonSeguirComprando.onclick = () => {
 // Sección para pagar
 
 const obtenerDescuento = (subtotal) => {
-    return (subtotal * 0.05)
-}
+  return subtotal * 0.05;
+};
 
 mostrarDescuento.textContent = "$" + obtenerDescuento(subtotal);
 
 const obtenerRecargo = (subtotal) => {
-    return (subtotal * 0.1)
-}
+  return subtotal * 0.1;
+};
 
 mostrarRecargo.textContent = "$" + obtenerRecargo(subtotal);
 
 let subtotalEnNumero = Number(subtotal);
 
-const metodosDePago = document.querySelectorAll(".metodos-de-pago")
-const recargos = document.querySelectorAll(".recargo")
-const inputCredito = document.querySelector("input[value='credito']")
-const inputDescuento = document.querySelector("input[value='giftcard']")
-const inputDelivery = document.querySelector("input[value='delivery']")
-
+const metodosDePago = document.querySelectorAll(".metodos-de-pago");
+const recargos = document.querySelectorAll(".recargo");
+const inputCredito = document.querySelector("input[value='credito']");
+const inputDescuento = document.querySelector("input[value='giftcard']");
+const inputDelivery = document.querySelector("input[value='delivery']");
 
 for (let metodo of metodosDePago) {
   metodo.oninput = () => {
@@ -196,7 +188,7 @@ const recargoTarjeta = () => {
   if (inputCredito.checked) {
     resultadoRecargo = subtotalEnNumero * 0.1;
     console.log(resultadoRecargo);
-    mostrarRecargo.textContent = '$' + resultadoRecargo;
+    mostrarRecargo.textContent = "$" + resultadoRecargo;
     recargoCredito.classList.remove("no-mostrar");
   } else {
     resultadoRecargo = 0;
@@ -210,7 +202,7 @@ let resultadoDescuento;
 const aplicarDescuento = () => {
   if (inputDescuento.checked) {
     resultadoDescuento = -subtotalEnNumero * 0.05;
-    mostrarDescuento.textContent = '$' + resultadoDescuento;
+    mostrarDescuento.textContent = "$" + resultadoDescuento;
     descuentoGiftCard.classList.remove("no-mostrar");
   } else {
     resultadoDescuento = 0;
@@ -224,7 +216,7 @@ let resultadoEnvio;
 const recargoEnvio = () => {
   if (inputDelivery.checked) {
     resultadoEnvio = 300;
-    mostrarDelivery.textContent = '$' + resultadoEnvio;
+    mostrarDelivery.textContent = "$" + resultadoEnvio;
     recargoDelivery.classList.remove("no-mostrar");
   } else {
     resultadoEnvio = 0;
@@ -234,25 +226,23 @@ const recargoEnvio = () => {
 };
 
 const calcularTotalCompleto = () => {
-  let totalCompleto = subtotalEnNumero + recargoEnvio()  + recargoTarjeta() + aplicarDescuento();
-  mostrarTotal.textContent = '$' + totalCompleto.toFixed(2);
+  let totalCompleto =
+    subtotalEnNumero + recargoEnvio() + recargoTarjeta() + aplicarDescuento();
+  mostrarTotal.textContent = "$" + totalCompleto.toFixed(2);
   return totalCompleto;
 };
-
 
 // Búsqueda
 
 busquedaProductos.oninput = (e) => {
-  buscarProductos()
-}
+  buscarProductos();
+};
 
 const buscarProductos = () => {
-
-
   if (busquedaProductos.oninput) {
     for (let tarjeta of tarjetas) {
       const titulo = tarjeta.dataset.nombre;
-      const busqueda = busquedaProductos.value.toLowerCase()
+      const busqueda = busquedaProductos.value.toLowerCase();
 
       if (titulo.includes(busqueda)) {
         tarjeta.classList.remove("no-mostrar");
@@ -260,9 +250,8 @@ const buscarProductos = () => {
         tarjeta.classList.add("no-mostrar");
       }
     }
-  };
-}
-
+  }
+};
 
 // Filtro puntaje
 
@@ -302,10 +291,7 @@ const coincidenCheckboxYTarjeta = (tarjeta) => {
   }
 };
 
-
-
 const filtrarTarjetas = () => {
-
   for (let tarjeta of tarjetas) {
     tarjeta.classList.add("no-mostrar");
     if (checkboxSeleccionado()) {
@@ -317,8 +303,6 @@ const filtrarTarjetas = () => {
     }
   }
 };
-
-
 
 // Filtro categorías
 
@@ -340,11 +324,9 @@ botonLimpiar.onclick = () => {
 const cantidadMostrada = document.querySelector(".cantidad-mostrada");
 const checkboxes = document.querySelectorAll("input[type='checkbox']");
 
-
 busquedaProductos.oninput = () => {
   buscarProductos();
   cantidadProductosMostrados();
-  
 };
 
 for (let checkbox of checkboxes) {
@@ -357,36 +339,34 @@ for (let checkbox of checkboxes) {
 const cantidadProductosNoMostrados = document.getElementsByClassName("producto no-mostrar");
 
 const cantidadProductosMostrados = () => {
-  productosMostrados = tarjetasProducto.length - cantidadProductosNoMostrados.length;
+  productosMostrados =
+    tarjetasProducto.length - cantidadProductosNoMostrados.length;
   cantidadMostrada.textContent = productosMostrados;
 };
 
-
-// Responsive 
+// Responsive
 
 botonFiltro.onclick = () => {
-  overlayFiltrosResponsive.classList.remove("no-mostrar")
+  overlayFiltrosResponsive.classList.remove("no-mostrar");
   document.body.classList.add("no-scroll");
-  seccionFiltrosResponsive.classList.add("mostrar-seccion-aside-responsive")
-}
+  seccionFiltrosResponsive.classList.add("mostrar-seccion-aside-responsive");
+};
 
 botonCerrarAsideResponsive.onclick = () => {
-  overlayFiltrosResponsive.classList.add("no-mostrar")
+  overlayFiltrosResponsive.classList.add("no-mostrar");
   document.body.classList.remove("no-scroll");
-  seccionFiltrosResponsive.classList.remove("mostrar-seccion-aside-responsive")
-}
+  seccionFiltrosResponsive.classList.remove("mostrar-seccion-aside-responsive");
+};
 
 busquedaProductosResponsive.oninput = (e) => {
-  buscarProductosResponsive()
-}
+  buscarProductosResponsive();
+};
 
 const buscarProductosResponsive = () => {
-
-
   if (busquedaProductosResponsive.oninput) {
     for (let tarjeta of tarjetas) {
       const titulo = tarjeta.dataset.nombre;
-      const busqueda = busquedaProductosResponsive.value.toLowerCase()
+      const busqueda = busquedaProductosResponsive.value.toLowerCase();
 
       if (titulo.includes(busqueda)) {
         tarjeta.classList.remove("no-mostrar");
@@ -394,14 +374,10 @@ const buscarProductosResponsive = () => {
         tarjeta.classList.add("no-mostrar");
       }
     }
-  };
-}
-
+  }
+};
 
 busquedaProductosResponsive.oninput = () => {
   buscarProductosResponsive();
   cantidadProductosMostrados();
 };
-
-
-

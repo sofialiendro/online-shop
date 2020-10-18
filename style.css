@@ -18,6 +18,14 @@ html {
     box-sizing: border-box;
 }
 
+button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Comienza header */
+
 .contenedor-header {
     background-color: #f5f5f5;
     display: flex;
@@ -28,7 +36,6 @@ html {
     margin-left: 150px;
 }
 
-
 #icono-header {
     font-size: 23px;
 }
@@ -36,6 +43,17 @@ html {
 .contenedor-header > div {
     flex-basis: 150px;
 }
+
+.view-btn, .fa-shopping-cart {
+    font-size: 20px;
+    color: #000;
+    padding: 0;
+    margin-left: 15px;
+}
+
+/* Fin header */
+
+/* Comienza seccion principal */
 
 .contenedor-imagen-principal {
     width: 100%;
@@ -71,6 +89,10 @@ html {
     max-width: 1300px;
     justify-content: center;
 }
+
+/* Fin sección principal */
+
+/* Comienzo modales, checkout y secciones del carrito */
 
 .overlay {
     width: 100%;
@@ -211,6 +233,8 @@ html {
     color:#fff;
 }
 
+/* Checkout */
+
 .overlay-cuadro-comprar {
     width: 100%;
     height: 100vh;
@@ -234,7 +258,6 @@ html {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow: scroll;
 }
 
 .linea-divisoria-cuadro-comprar {
@@ -313,18 +336,14 @@ html {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    margin-top: 20px;
 }
-
-
-
-
 
 .contenedor-subtotal, .contenedor-total, .contenedor-recargo, .contenedor-delivery, .contenedor-giftcard {
     display: flex;
     justify-content: space-between;
     line-height: 1.8;
 }
-
 
 .giftcard-opciones-pago, .giftcard-precio-opciones-pago {
     color: rgb(56, 187, 56);
@@ -349,7 +368,6 @@ html {
     font-weight: 800;
 }
     
-
 .cuadro-vaciar {
     background-color: #fff;
     padding: 40px;
@@ -419,13 +437,16 @@ html {
     margin-top: 30px;
 }
 
-
 .formulario {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+/* Fin modales, checkout y secciones del carrito */
+
+
+/* Comienzo aside */
 
 .seccion-aside {
     background-color: #f5f5f5;
@@ -433,11 +454,6 @@ html {
     flex-direction: column;
     max-width: 270px;
     margin-top: 50px;
-}
-
-.seccion-productos {
-    background-color: #f5f5f5;
-    width: 1000px;
 }
 
 .contenedor-botones-aside-1 {
@@ -450,7 +466,6 @@ html {
 .filters-clear-btn {
     font-family: "Quicksand";
 }
-
 
 button, input, label {
     cursor: pointer;
@@ -469,7 +484,6 @@ button, input, label {
     font-family: "Quicksand";
     background-color: #f5f5f5;
 }
-
 
 .contenedor-busqueda {
     display: flex;
@@ -499,6 +513,15 @@ button, input, label {
     margin: 5px;
 }
 
+/* Fin aside */
+
+/* Comienzo barra principal y productos */
+
+.seccion-productos {
+    background-color: #f5f5f5;
+    width: 1000px;
+}
+
 .contenedor-barra-principal-productos {
     background-color: #fff;
     display: flex;
@@ -508,25 +531,11 @@ button, input, label {
     padding: 20px 30px;
 }
 
-
 .view-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-}
-
-.view-btn, .fa-shopping-cart {
-    font-size: 20px;
-    color: #000;
-    padding: 0;
-    margin-left: 15px;
-}
-
-button {
-    border: 0;
-    background: transparent;
-    cursor: pointer;
 }
 
 .fa, .fas {
@@ -539,8 +548,6 @@ button {
     flex-wrap: wrap;
     padding: 0;
 }
-
-
 
 .producto {
     background-color: #fff;
@@ -570,7 +577,6 @@ button {
 .producto:hover {
     box-shadow: 0 0px 10px 0 rgba(185, 182, 182, 0.521),0 6px 10px 0 rgba(146, 144, 144, 0.19)
   }
-
 
 .product-img-container {
     height: 250px;
@@ -602,7 +608,7 @@ button {
 }
 
 
-.add-to-cart-btn {
+.boton-agregar-carrito {
     width: 100%;
     height: 40px;
 }
@@ -630,10 +636,12 @@ button {
 }
 
 
+/* Fin barra principal y productos */
+
   
 /* Comienza footer */
  
-footer {
+.footer-tienda {
     margin-top: 70px;
     display: flex;
     justify-content: center;
@@ -684,16 +692,12 @@ ul {
     margin: 0;
 }
 
+
+/* Clases para JS y Responsive */
+
 .boton-responsive-filtro {
     display: none;
 }
-
-
-
-
-
-
-/* Clase para JS */
 
 .no-mostrar {
     display: none;
@@ -711,9 +715,6 @@ ul {
 .mostrar-cuadros {
     display: flex;
 }
-
-
-
 
 
 /* Responsive */
@@ -771,7 +772,7 @@ ul {
         
     }
 
-    .add-to-cart-btn {
+    .boton-agregar-carrito {
         width: 100%;
         min-width: 300px;
     }
@@ -839,7 +840,6 @@ ul {
         right: 0;
         max-width: 100%;
         position: initial;
-        overflow: scroll;
         width: 100vh;
         height: 100vh;
     }
@@ -854,6 +854,7 @@ ul {
         justify-content: center;
         align-items: center;
         padding: 0;
+        margin-top: 0;
         margin: 30px;
     }
 
@@ -1184,3 +1185,6 @@ ul {
         display: none;
     }
 }
+
+
+/* Fin responsive */
