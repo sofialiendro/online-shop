@@ -232,85 +232,221 @@ const calcularTotalCompleto = () => {
   return totalCompleto;
 };
 
-// Búsqueda
+// // Búsqueda
 
-busquedaProductos.oninput = (e) => {
-  buscarProductos();
-};
+// busquedaProductos.oninput = (e) => {
+//   buscarProductos();
+// };
 
-const buscarProductos = () => {
-  if (busquedaProductos.oninput) {
-    for (let tarjeta of tarjetas) {
-      const titulo = tarjeta.dataset.nombre;
-      const busqueda = busquedaProductos.value.toLowerCase();
+// const buscarProductos = () => {
+//   if (busquedaProductos.oninput) {
+//     for (let tarjeta of tarjetas) {
+//       const titulo = tarjeta.dataset.nombre;
+//       const busqueda = busquedaProductos.value.toLowerCase();
 
-      if (titulo.includes(busqueda)) {
-        tarjeta.classList.remove("no-mostrar");
-      } else {
-        tarjeta.classList.add("no-mostrar");
-      }
-    }
-  }
+//       if (titulo.includes(busqueda)) {
+//         tarjeta.classList.remove("no-mostrar");
+//       } else {
+//         tarjeta.classList.add("no-mostrar");
+//       }
+//     }
+//   }
+// };
+
+// // Filtro puntaje
+
+// for (let checkbox of filtroPuntaje) {
+//   checkbox.onclick = () => {
+//     filtrarTarjetas();
+//   };
+// }
+
+// const checkboxSeleccionado = () => {
+//   for (let checkbox of filtroPuntaje) {
+//     if (checkbox.checked) {
+//       return true;
+//     }
+//   }
+
+//   for (let checkbox of filtroCategoria) {
+//     if (checkbox.checked) {
+//       return true;
+//     }
+//   }
+// };
+
+// const coincidenCheckboxYTarjeta = (tarjeta) => {
+//   const puntaje = tarjeta.dataset.puntaje;
+//   for (let checkbox of filtroPuntaje) {
+//     if (checkbox.value === puntaje && checkbox.checked) {
+//       return true;
+//     }
+//   }
+
+//   const categories = tarjeta.dataset.categoria;
+//   for (let checkbox of filtroCategoria) {
+//     if (checkbox.value === categories && checkbox.checked) {
+//       return true;
+//     }
+//   }
+// };
+
+// const filtrarTarjetas = () => {
+//   for (let tarjeta of tarjetas) {
+//     tarjeta.classList.add("no-mostrar");
+//     if (checkboxSeleccionado()) {
+//       if (coincidenCheckboxYTarjeta(tarjeta)) {
+//         tarjeta.classList.remove("no-mostrar");
+//       }
+//     } else {
+//       tarjeta.classList.remove("no-mostrar");
+//     }
+//   }
+// };
+
+// // Filtro categorías
+
+// for (let checkbox of filtroCategoria) {
+//   checkbox.onclick = () => {
+//     filtrarTarjetas();
+//   };
+// }
+
+
+
+// Filtro categoria
+
+for (let checkbox of filtroCategoria) {
+  checkbox.oninput = () => {
+    filtrarTarjetas();
+  };
+}
+
+// Filtro Busqueda
+
+busquedaProductos.oninput = () => {
+  filtrarTarjetas();
 };
 
 // Filtro puntaje
 
 for (let checkbox of filtroPuntaje) {
-  checkbox.onclick = () => {
+  checkbox.oninput = () => {
     filtrarTarjetas();
   };
 }
 
-const checkboxSeleccionado = () => {
+
+// Filtro productos
+
+
+const mostrarTarjetas = (tarjeta) => {
+  return tarjeta.classList.remove("no-mostrar");
+};
+
+const ocultarTarjetas = (tarjeta) => {
+  return tarjeta.classList.add("no-mostrar");
+};
+
+const hayAlgunaCategoriaChequeada = () => {
+  for (let checkbox of filtroCategoria) {
+    if (checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const hayAlgunRatingSeleccionado = () => {
   for (let checkbox of filtroPuntaje) {
     if (checkbox.checked) {
       return true;
     }
   }
+  return false;
+};
 
-  for (let checkbox of filtroCategoria) {
-    if (checkbox.checked) {
-      return true;
-    }
+const hayAlgoEscritoEnInput = () => {
+  return Boolean(busquedaProductos.value);
+};
+
+const coincideBusquedaInputConTarjeta = (tarjeta) => {
+  const nombreTarjeta = tarjeta.dataset.nombre.toLowerCase();
+  const busqueda = busquedaProductos.value.toLowerCase();
+
+  if (nombreTarjeta.includes(busqueda)) {
+    return true;
+  } else {
+    return false;
   }
 };
 
-const coincidenCheckboxYTarjeta = (tarjeta) => {
-  const puntaje = tarjeta.dataset.puntaje;
-  for (let checkbox of filtroPuntaje) {
-    if (checkbox.value === puntaje && checkbox.checked) {
+const coincideCategoriaConTarjeta = (tarjeta) => {
+  for (let checkbox of filtroCategoria) {
+    if (checkbox.value === tarjeta.dataset.categoria && checkbox.checked) {
       return true;
     }
   }
+  return false;
+};
 
-  const categories = tarjeta.dataset.categoria;
-  for (let checkbox of filtroCategoria) {
-    if (checkbox.value === categories && checkbox.checked) {
+const coincideRatingConTarjeta = (tarjeta) => {
+  for (let checkbox of filtroPuntaje) {
+    if (checkbox.value === tarjeta.dataset.puntaje && checkbox.checked) {
       return true;
     }
+  }
+  return false;
+};
+
+const filtroInputBusqueda = (tarjeta) => {
+  if (hayAlgoEscritoEnInput()) {
+    return coincideBusquedaInputConTarjeta(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+const filtroCategoriaSeleccionada = (tarjeta) => {
+  if (hayAlgunaCategoriaChequeada()) {
+    return coincideCategoriaConTarjeta(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+const filtroRatingSeleccionado = (tarjeta) => {
+  if (hayAlgunRatingSeleccionado()) {
+    return coincideRatingConTarjeta(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+// Todos los filtros
+
+const pasaFiltros = (tarjeta) => {
+  if (
+    filtroInputBusqueda(tarjeta) == true &&
+    filtroCategoriaSeleccionada(tarjeta) == true &&
+    filtroRatingSeleccionado(tarjeta) == true
+  ) {
+    return true;
+  } else {
+    return false;
   }
 };
 
 const filtrarTarjetas = () => {
-  for (let tarjeta of tarjetas) {
-    tarjeta.classList.add("no-mostrar");
-    if (checkboxSeleccionado()) {
-      if (coincidenCheckboxYTarjeta(tarjeta)) {
-        tarjeta.classList.remove("no-mostrar");
-      }
+  for (let tarjeta of tarjetasProducto) {
+    if (pasaFiltros(tarjeta)) {
+      mostrarTarjetas(tarjeta);
     } else {
-      tarjeta.classList.remove("no-mostrar");
+      ocultarTarjetas(tarjeta);
     }
   }
+
 };
-
-// Filtro categorías
-
-for (let checkbox of filtroCategoria) {
-  checkbox.onclick = () => {
-    filtrarTarjetas();
-  };
-}
 
 // Botón limpiar
 
@@ -326,7 +462,7 @@ const cantidadMostrada = document.querySelector(".cantidad-mostrada");
 const checkboxes = document.querySelectorAll("input[type='checkbox']");
 
 busquedaProductos.oninput = () => {
-  buscarProductos();
+  filtrarTarjetas();
   cantidadProductosMostrados();
 };
 
@@ -345,6 +481,8 @@ const cantidadProductosMostrados = () => {
   cantidadMostrada.textContent = productosMostrados;
 };
 
+
+
 // Responsive
 
 botonFiltro.onclick = () => {
@@ -359,26 +497,173 @@ botonCerrarAsideResponsive.onclick = () => {
   seccionFiltrosResponsive.classList.remove("mostrar-seccion-aside-responsive");
 };
 
-busquedaProductosResponsive.oninput = (e) => {
-  buscarProductosResponsive();
+
+
+
+
+// busquedaProductosResponsive.oninput = (e) => {
+//   buscarProductosResponsive();
+// };
+
+// const buscarProductosResponsive = () => {
+//   if (busquedaProductosResponsive.oninput) {
+//     for (let tarjeta of tarjetas) {
+//       const titulo = tarjeta.dataset.nombre;
+//       const busqueda = busquedaProductosResponsive.value.toLowerCase();
+
+//       if (titulo.includes(busqueda)) {
+//         tarjeta.classList.remove("no-mostrar");
+//       } else {
+//         tarjeta.classList.add("no-mostrar");
+//       }
+//     }
+//   }
+// };
+
+// Filtro Busqueda
+
+busquedaProductosResponsive.oninput = () => {
+  filtrarTarjetasResponsive();
 };
 
-const buscarProductosResponsive = () => {
-  if (busquedaProductosResponsive.oninput) {
-    for (let tarjeta of tarjetas) {
-      const titulo = tarjeta.dataset.nombre;
-      const busqueda = busquedaProductosResponsive.value.toLowerCase();
+// Filtro puntaje
 
-      if (titulo.includes(busqueda)) {
-        tarjeta.classList.remove("no-mostrar");
-      } else {
-        tarjeta.classList.add("no-mostrar");
-      }
+for (let checkbox of filtroPuntaje) {
+  checkbox.oninput = () => {
+    filtrarTarjetasResponsive();
+  };
+}
+
+
+// Filtro productos
+
+
+const mostrarTarjetasResponsive = (tarjeta) => {
+  return tarjeta.classList.remove("no-mostrar");
+};
+
+const ocultarTarjetasResponsive = (tarjeta) => {
+  return tarjeta.classList.add("no-mostrar");
+};
+
+const hayAlgunaCategoriaChequeadaResponsive = () => {
+  for (let checkbox of filtroCategoria) {
+    if (checkbox.checked) {
+      return true;
     }
+  }
+  return false;
+};
+
+const hayAlgunRatingSeleccionadoResponsive = () => {
+  for (let checkbox of filtroPuntaje) {
+    if (checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const hayAlgoEscritoEnInputResponsive = () => {
+  return Boolean(busquedaProductosResponsive.value);
+};
+
+const coincideBusquedaInputConTarjetaResponsive = (tarjeta) => {
+  const nombreTarjeta = tarjeta.dataset.nombre.toLowerCase();
+  const busqueda = busquedaProductosResponsive.value.toLowerCase();
+
+  if (nombreTarjeta.includes(busqueda)) {
+    return true;
+  } else {
+    return false;
   }
 };
 
+const coincideCategoriaConTarjetaResponsive = (tarjeta) => {
+  for (let checkbox of filtroCategoria) {
+    if (checkbox.value === tarjeta.dataset.categoria && checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const coincideRatingConTarjetaResponsive = (tarjeta) => {
+  for (let checkbox of filtroPuntaje) {
+    if (checkbox.value === tarjeta.dataset.puntaje && checkbox.checked) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const filtroInputBusquedaResponsive = (tarjeta) => {
+  if (hayAlgoEscritoEnInputResponsive()) {
+    return coincideBusquedaInputConTarjetaResponsive(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+const filtroCategoriaSeleccionadaResponsive = (tarjeta) => {
+  if (hayAlgunaCategoriaChequeadaResponsive()) {
+    return coincideCategoriaConTarjetaResponsive(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+const filtroRatingSeleccionadoResponsive = (tarjeta) => {
+  if (hayAlgunRatingSeleccionadoResponsive()) {
+    return coincideRatingConTarjetaResponsive(tarjeta);
+  } else {
+    return true;
+  }
+};
+
+// Todos los filtros
+
+const pasaFiltrosResponsive = (tarjeta) => {
+  if (
+    filtroInputBusquedaResponsive(tarjeta) == true &&
+    filtroCategoriaSeleccionadaResponsive(tarjeta) == true &&
+    filtroRatingSeleccionadoResponsive(tarjeta) == true
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const filtrarTarjetasResponsive = () => {
+  for (let tarjeta of tarjetasProducto) {
+    if (pasaFiltrosResponsive(tarjeta)) {
+      mostrarTarjetasResponsive(tarjeta);
+    } else {
+      ocultarTarjetasResponsive(tarjeta);
+    }
+  }
+
+};
+
+// Cantidad mostrada
+
 busquedaProductosResponsive.oninput = () => {
-  buscarProductosResponsive();
+  filtrarTarjetasResponsive();
   cantidadProductosMostrados();
 };
+
+// for (let checkbox of checkboxes) {
+//   checkbox.onclick = () => {
+//     filtrarTarjetasResponsive();
+//     cantidadProductosMostradosResponsive();
+//   };
+// }
+
+// // const cantidadProductosNoMostrados = document.getElementsByClassName("producto no-mostrar");
+
+// const cantidadProductosMostradosResponsive = () => {
+//   productosMostrados =
+//     tarjetasProducto.length - cantidadProductosNoMostrados.length;
+//     cantidadMostrada.textContent = productosMostrados;
+// };
