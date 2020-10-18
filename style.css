@@ -721,9 +721,6 @@ ul {
 
 @media (max-width: 576px) {
     
-    .no-scroll {
-        overflow: scroll;
-    }
 
     .seccion-aside {
         display: none;
@@ -842,6 +839,9 @@ ul {
         right: 0;
         max-width: 100%;
         position: initial;
+        overflow: scroll;
+        width: 100vh;
+        height: 100vh;
     }
 
     .resumen-y-contenedor-datos-personales-y-pago {
@@ -911,11 +911,7 @@ ul {
 @media (min-width: 577px) and (max-width: 767.98px) {
 
 
-    .no-scroll {
-        overflow: scroll;
-    }
 
-    
     .cuadro-comprar {
         width: 100%;
         height: 100%;
@@ -925,13 +921,11 @@ ul {
         left: 0;
         right: 0;
         max-width: 100%;
-        background-color: #fff;
-        color: black;
-        font-family: "Quicksand";
         position: fixed;
         transform: translate(50%);
         z-index: 500;
         margin: 0;
+   
     }
 
     .resumen {
