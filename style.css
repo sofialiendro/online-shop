@@ -703,7 +703,7 @@ ul {
     display: none;
 }
 
-.no-mostrar-producto {
+.no-mostrar-tarjeta {
     display: none;
 }
 
@@ -1108,6 +1108,10 @@ ul {
         background-color: #fff;
     }
 
+    .carrito {
+        overflow: scroll;
+    }
+
     .mostrar-seccion-aside-responsive {
         transform: translate(0);
     }
@@ -1115,6 +1119,11 @@ ul {
     .no-mostrar {
         display: none;
     }
+
+    .no-mostrar-producto {
+        display: none;
+    }
+
 
 }
 
@@ -1177,11 +1186,19 @@ ul {
   
     }
 
+    .carrito {
+        overflow: scroll;
+    }
+
     .formulario-enviar {
   
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .no-mostrar-producto {
+        display: none;
     }
 
     
@@ -1193,6 +1210,11 @@ ul {
     .seccion-aside-responsive {
         display: none;
     }
+
+    .no-mostrar-producto {
+        display: none;
+    }
+
 
 }
 
