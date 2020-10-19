@@ -914,6 +914,10 @@ ul {
         justify-content: flex-end;
     }
 
+    .no-mostrar-producto {
+        display: none;
+    }
+
     
 }
 
