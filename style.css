@@ -914,9 +914,6 @@ ul {
         justify-content: flex-end;
     }
 
-    .no-mostrar-producto {
-        display: none;
-    }
     
 }
 
@@ -1013,12 +1010,6 @@ ul {
         align-items: center;
     }
 
-    .carrito {
-
-        overflow: scroll;
-
-    }
-    
     .overlay-seccion-aside-responsive {
         width: 100vw;
         height: 100vh;
@@ -1121,9 +1112,6 @@ ul {
         display: none;
     }
 
-    .no-mostrar-producto {
-        display: none;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1192,11 +1180,6 @@ ul {
         align-items: center;
     }
 
-    .carrito {
-        
-        overflow: scroll;
-
-    }
     
 
 }
@@ -1206,6 +1189,7 @@ ul {
     .seccion-aside-responsive {
         display: none;
     }
+
 }
 
 

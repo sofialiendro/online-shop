@@ -1,9 +1,10 @@
-const busquedaProductos = document.querySelector("#buscar-productos");
+
 const tarjetas = document.getElementsByTagName("article");
 const filtroPuntaje = document.getElementsByClassName("rating-checkbox");
 const botonLimpiar = document.querySelector(".filters-clear-btn");
 const productos = document.getElementsByClassName("productos");
-const filtroCategoria = document.querySelectorAll(".categorias");
+const filtroCategoria = document.querySelectorAll("input[name='categoria']");
+const busquedaProductos = document.querySelector("#buscar-productos");
 
 const carrito = document.querySelector(".carrito");
 const botonMostrarCarrito = document.querySelector("#abrir-carrito");
@@ -66,9 +67,6 @@ const seccionFiltrosResponsive = document.querySelector(".seccion-aside-responsi
 const botonCerrarAsideResponsive = document.querySelector("#boton-cerrar-aside-responsive");
 const busquedaProductosResponsive = document.querySelector("#buscar-productos-responsive");
 const cuadroComprarResponsive = document.querySelector("#reponsive-cuadro-comprar");
-
-
-
 
 
 
@@ -137,9 +135,9 @@ const hayAlgoEscritoEnInput = () => {
 
 const coincideBusquedaInputConTarjeta = (tarjeta) => {
   const nombreTarjeta = tarjeta.dataset.nombre.toLowerCase();
-  const busqueda = busquedaProductos.value.toLowerCase();
+  const busquedaInput = busquedaProductos.value.toLowerCase();
 
-  if (nombreTarjeta.includes(busqueda)) {
+  if (nombreTarjeta.includes(busquedaInput)) {
     return true;
   } else {
     return false;
@@ -962,4 +960,3 @@ const pasaFiltrosResponsive = (tarjeta) => {
 //     tarjetasProducto.length - cantidadProductosNoMostrados.length;
 //     cantidadMostrada.textContent = productosMostrados;
 // };
-
