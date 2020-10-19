@@ -703,7 +703,11 @@ ul {
     display: none;
 }
 
-.no-mostrar-tarjeta {
+.no-mostrar-producto-responsive {
+    display: none;
+}
+
+.no-mostrar-producto {
     display: none;
 }
 
@@ -918,6 +922,10 @@ ul {
         display: none;
     }
 
+    .no-mostrar-producto-responsive {
+        display: none;
+    }
+
     
 }
 
@@ -1120,6 +1128,10 @@ ul {
         display: none;
     }
 
+    .no-mostrar-producto-responsive {
+        display: none;
+    }
+
     .no-mostrar-producto {
         display: none;
     }
@@ -1197,10 +1209,13 @@ ul {
         align-items: center;
     }
 
-    .no-mostrar-producto {
+    .no-mostrar-producto-responsive {
         display: none;
     }
 
+    .no-mostrar-producto {
+        display: none;
+    }
     
 
 }
@@ -1211,10 +1226,13 @@ ul {
         display: none;
     }
 
-    .no-mostrar-producto {
+    .no-mostrar-producto-responsive {
         display: none;
     }
 
+    .no-mostrar-producto {
+        display: none;
+    }
 
 }
 
