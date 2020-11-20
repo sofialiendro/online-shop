@@ -10,10 +10,6 @@ Impecable el trabajo en accesibilidad. Utilizas correctamente las etiquetas sema
 
 ### Filtros y búsqueda
 
-Tus filtros funcionan a la perfeccion. Me gusta mucho como resolviste los filtros responsive y la reutilizacion de codigo. 
-
-### Filtros y búsqueda
-
 Tus filtros funcionan a la perfeccion. No solo eso, sino que la utilizacion en responsive es perfecta. Entiendo la frustracion por haber tenido que duplicar el codigo, pero prefiero eso y mantener el codigo funcional. Ahora que funciona, podes ponerte mas tranquila a ver como eliminar el codigo innecesario. Por ejemplo: necesitas la funcion filtrarTarjetasResponsive? Que pasa si llamas a filtrarTarjetas en lugar de a esa funcion? 
 
 ### Carrito
